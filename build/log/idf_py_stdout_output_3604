@@ -1,0 +1,1637 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FA�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF GIT-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  4 2024 09:10:41[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24e9ch (151196) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00034ec4 vaddr=3ffb0000 size=03f40h ( 16192) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038e0c vaddr=40080000 size=0720ch ( 29196) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2680h (665216) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000e26a8 vaddr=4008720c size=10284h ( 66180) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     Project_PMU_Demo[0m
+[0;32mI (470) app_init: App version:      1[0m
+[0;32mI (474) app_init: Compile time:     Nov  4 2024 09:10:07[0m
+[0;32mI (480) app_init: ELF file SHA256:  ad2c0e32d...[0m
+[0;32mI (485) app_init: ESP-IDF:          GIT-NOTFOUND[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (495) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB8758 len 000278A8 (158 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 40097490 len 00008B70 (34 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;33mW (552) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (566) main_task: Started on CPU0[0m
+[0;32mI (576) main_task: Calling app_main()[0m
+[0;32mI (576) MQTT_CHARGER: Starting MQTT Charger Example - By Dhruv[0m
+[0;32mI (626) wifi:wifi driver task: 3ffc0828, prio:23, stack:6656, core=0[0m
+[0;32mI (636) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (646) wifi:wifi certification version: v7.0[0m
+[0;32mI (646) wifi:config NVS flash: enabled[0m
+[0;32mI (646) wifi:config nano formating: disabled[0m
+[0;32mI (646) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (646) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (656) wifi:Init management short buffer num: 32[0m
+[0;32mI (656) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (666) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (666) wifi:Init static rx buffer num: 10[0m
+[0;32mI (666) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (676) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: accept mbox: 6[0m
+[0;32mI (686) wifi_init: tcpip mbox: 32[0m
+[0;32mI (686) wifi_init: udp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp mbox: 6[0m
+[0;32mI (696) wifi_init: tcp tx win: 5760[0m
+[0;32mI (696) wifi_init: tcp rx win: 5760[0m
+[0;32mI (706) wifi_init: tcp mss: 1440[0m
+[0;32mI (706) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (706) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (716) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (726) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (816) wifi:mode : sta (d4:8a:fc:c6:34:a0)[0m
+[0;32mI (816) wifi:enable tsf[0m
+[0;32mI (816) MQTT_CHARGER: Connecting to WiFi...[0m
+[0;32mI (836) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (836) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (836) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (846) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (876) wifi:connected with ApnaBanda, aid = 1, channel 11, BW20, bssid = e2:2e:0b:e4:8e:ff[0m
+[0;32mI (876) wifi:security: WPA2-PSK, phy: bgn, rssi: -53[0m
+[0;32mI (876) wifi:pm start, type: 1[0m
+
+[0;32mI (876) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (906) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1886) esp_netif_handlers: sta ip: 192.168.137.238, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (1886) MQTT_CHARGER: Connected to WiFi with IP Address: 192.168.137.238[0m
+[0;32mI (5816) main_task: Returned from app_main()[0m
+[0;32mI (6646) MQTT_CHARGER: MQTT connected[0m
+[0;32mI (6656) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=44123[0m
+[0;32mI (6676) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=472[0m
+[0;32mI (6696) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=3065[0m
+[0;32mI (11556) wifi:<ba-add>idx:0 (ifx:0, e2:2e:0b:e4:8e:ff), tid:0, ssn:13, winSize:64[0m
+[0;32mI (16716) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=2476[0m
+[0;32mI (16736) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=52935[0m
+[0;32mI (16756) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26810[0m
+[0;32mI (26776) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=12869[0m
+[0;32mI (26796) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=23494[0m
+[0;32mI (26816) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=779[0m
+[0;32mI (36836) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=13182[0m
+[0;32mI (36856) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=21992[0m
+[0;32mI (36876) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36220[0m
+[0;32mI (46896) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=38101[0m
+[0;32mI (46916) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=22737[0m
+[0;32mI (46936) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=20504[0m
+[0;32mI (56956) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=41252[0m
+[0;32mI (56976) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=4820[0m
+[0;32mI (56996) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61594[0m
+[0;32mI (67006) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=29335[0m
+[0;32mI (67026) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=33588[0m
+[0;32mI (67046) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=11552[0m
+[0;32mI (77076) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=35956[0m
+[0;32mI (77096) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=42667[0m
+[0;32mI (77116) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=42780[0m
+[0;32mI (87136) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=9494[0m
+[0;32mI (87156) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=52564[0m
+[0;32mI (87176) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44991[0m
+[0;32mI (97196) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=58514[0m
+[0;32mI (97216) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=55931[0m
+[0;32mI (97236) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23256[0m
+[0;32mI (107256) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=19003[0m
+[0;32mI (107276) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=11871[0m
+[0;32mI (107296) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6221[0m
+[0;32mI (117316) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=9368[0m
+[0;32mI (117336) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=12810[0m
+[0;32mI (117356) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40457[0m
+[0;32mI (127376) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=62492[0m
+[0;32mI (127396) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=43781[0m
+[0;32mI (127416) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=34682[0m
+[0;32mI (137436) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=2814[0m
+[0;32mI (137456) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=42980[0m
+[0;32mI (137476) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=64562[0m
+[0;32mI (147496) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=60526[0m
+[0;32mI (147516) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=37972[0m
+[0;32mI (147536) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=4116[0m
+[0;32mI (157556) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=64855[0m
+[0;32mI (157576) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=42635[0m
+[0;32mI (157596) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=37753[0m
+[0;32mI (167616) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=56602[0m
+[0;32mI (167636) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=26622[0m
+[0;32mI (167656) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=9675[0m
+[0;32mI (177676) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=61807[0m
+[0;32mI (177696) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=48299[0m
+[0;32mI (177716) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26285[0m
+[0;32mI (187736) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=29422[0m
+[0;32mI (187756) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=47304[0m
+[0;32mI (187776) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59047[0m
+[0;32mI (197796) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=2187[0m
+[0;32mI (197816) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=60824[0m
+[0;32mI (197836) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39980[0m
+[0;32mI (207856) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=33665[0m
+[0;32mI (207876) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=62732[0m
+[0;32mI (207896) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51011[0m
+[0;32mI (217916) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=13276[0m
+[0;32mI (217936) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=42624[0m
+[0;32mI (217956) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49351[0m
+[0;32mI (227976) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=14593[0m
+[0;32mI (227996) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=17833[0m
+[0;32mI (228016) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62607[0m
+[0;32mI (238036) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=19842[0m
+[0;32mI (238056) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=24381[0m
+[0;32mI (238076) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=11132[0m
+[0;32mI (248096) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=46623[0m
+[0;32mI (248116) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=19937[0m
+[0;32mI (248136) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35100[0m
+[0;32mI (258156) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=64916[0m
+[0;32mI (258176) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=8697[0m
+[0;32mI (258196) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=50177[0m
+[0;32mI (268216) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=54596[0m
+[0;32mI (268236) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=33608[0m
+[0;32mI (268256) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=18710[0m
+[0;32mI (278276) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=22043[0m
+[0;32mI (278296) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=62799[0m
+[0;32mI (278316) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26852[0m
+[0;32mI (288336) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=54987[0m
+[0;32mI (288356) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=35862[0m
+[0;32mI (288376) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=19909[0m
+[0;32mI (298396) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=8197[0m
+[0;32mI (298416) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=37572[0m
+[0;32mI (298436) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36452[0m
+[0;32mI (308456) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=60174[0m
+[0;32mI (308476) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=34493[0m
+[0;32mI (308496) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25317[0m
+[0;32mI (318516) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=60614[0m
+[0;32mI (318536) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=50344[0m
+[0;32mI (318556) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1464[0m
+[0;32mI (328576) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=16741[0m
+[0;32mI (328596) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=60039[0m
+[0;32mI (328616) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=29764[0m
+[0;32mI (338636) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=24451[0m
+[0;32mI (338656) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=25355[0m
+[0;32mI (338676) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24674[0m
+[0;32mI (348696) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=9814[0m
+[0;32mI (348716) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=40209[0m
+[0;32mI (348736) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=37846[0m
+[0;32mI (358756) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=47385[0m
+[0;32mI (358776) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=9375[0m
+[0;32mI (358796) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54437[0m
+[0;32mI (368816) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=56528[0m
+[0;32mI (368836) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=4155[0m
+[0;32mI (368856) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=56176[0m
+[0;32mI (378876) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=7304[0m
+[0;32mI (378896) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=54849[0m
+[0;32mI (378916) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59171[0m
+[0;32mI (388936) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=16598[0m
+[0;32mI (388956) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=40868[0m
+[0;32mI (388976) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=38348[0m
+[0;32mI (398996) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=58639[0m
+[0;32mI (399016) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=42551[0m
+[0;32mI (399036) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=17545[0m
+[0;32mI (409056) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=6388[0m
+[0;32mI (409076) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=30201[0m
+[0;32mI (409096) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=22371[0m
+[0;32mI (419116) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=17627[0m
+[0;32mI (419136) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=56158[0m
+[0;32mI (419156) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61924[0m
+[0;32mI (429176) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=596[0m
+[0;32mI (429196) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=14438[0m
+[0;32mI (429216) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6473[0m
+[0;32mI (439236) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=62462[0m
+[0;32mI (439256) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=40357[0m
+[0;32mI (439276) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=18741[0m
+[0;32mI (449296) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=63128[0m
+[0;32mI (449316) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=19012[0m
+[0;32mI (449336) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40137[0m
+[0;32mI (459356) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=48467[0m
+[0;32mI (459376) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=56045[0m
+[0;32mI (459396) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=14028[0m
+[0;32mI (469416) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=61341[0m
+[0;32mI (469436) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=46967[0m
+[0;32mI (469456) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62649[0m
+[0;32mI (479476) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=26324[0m
+[0;32mI (479496) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=64332[0m
+[0;32mI (479516) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=9904[0m
+[0;32mI (489536) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=21800[0m
+[0;32mI (489556) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=46839[0m
+[0;32mI (489576) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44320[0m
+[0;32mI (499596) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=37930[0m
+[0;32mI (499616) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=33779[0m
+[0;32mI (499636) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62177[0m
+[0;32mI (509656) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=52453[0m
+[0;32mI (509676) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=25576[0m
+[0;32mI (509696) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41962[0m
+[0;32mI (519716) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=31036[0m
+[0;32mI (519736) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=48914[0m
+[0;32mI (519756) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=21511[0m
+[0;32mI (529776) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=3622[0m
+[0;32mI (529796) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=24792[0m
+[0;32mI (529816) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=32660[0m
+[0;32mI (539836) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=37878[0m
+[0;32mI (539856) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=46772[0m
+[0;32mI (539876) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=27846[0m
+[0;32mI (549896) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=51486[0m
+[0;32mI (549916) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=3260[0m
+[0;32mI (549936) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26660[0m
+[0;32mI (559956) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=49326[0m
+[0;32mI (559976) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=55373[0m
+[0;32mI (559996) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62265[0m
+[0;32mI (570016) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=63009[0m
+[0;32mI (570036) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=46623[0m
+[0;32mI (570056) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6555[0m
+[0;32mI (580076) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=51006[0m
+[0;32mI (580096) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=12591[0m
+[0;32mI (580116) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44017[0m
+[0;32mI (590136) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=52961[0m
+[0;32mI (590156) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=16780[0m
+[0;32mI (590176) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=29920[0m
+[0;32mI (600196) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=12692[0m
+[0;32mI (600216) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=47337[0m
+[0;32mI (600236) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=2509[0m
+[0;32mI (610256) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=20432[0m
+[0;32mI (610276) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=59840[0m
+[0;32mI (610296) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=4184[0m
+[0;32mI (620316) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=57912[0m
+[0;32mI (620336) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=54657[0m
+[0;32mI (620356) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=34926[0m
+[0;32mI (630376) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=31183[0m
+[0;32mI (630396) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=63266[0m
+[0;32mI (630416) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6164[0m
+[0;32mI (640436) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=41125[0m
+[0;32mI (640456) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"faultStatuses":	[0, 11, 2, 5],
+	"connectorStatuses":	[1, 2, 3, 4],
+	"webSocketStatus":	1
+}, msg_id=53684[0m
+[0;32mI (640476) MQTT_CHARGER: Published to topic chargerSession/charger123 with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=747[0m

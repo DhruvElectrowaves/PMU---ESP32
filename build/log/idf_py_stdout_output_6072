@@ -1,0 +1,74 @@
+[1/5] cmd.exe /C "cd /D D:\Users\ASUS\workspace\Project_PMU_Demo\build\esp-idf\esptool_py && D:\esp\tools\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/esp/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Users/ASUS/workspace/Project_PMU_Demo/build/partition_table/partition-table.bin D:/Users/ASUS/workspace/Project_PMU_Demo/build/Project_PMU_Demo.bin"
+Project_PMU_Demo.bin binary size 0xe3810 bytes. Smallest app partition is 0x100000 bytes. 0x1c7f0 bytes (11%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Users\ASUS\workspace\Project_PMU_Demo\build\bootloader\esp-idf\esptool_py && D:\esp\tools\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/esp/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Users/ASUS/workspace/Project_PMU_Demo/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D D:\esp\esp-idf-v5.3.1\componentesptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 Project_PMU_Demo.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.0
+Serial port COM3
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:c6:34:a0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f3fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16359...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16359 compressed) at 0x00001000 in 0.6 seconds (effective 381.8 kbit/s)...
+Hash of data verified.
+Compressed 931856 bytes to 588434...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d905... (5 %)
+Writing at 0x000261fa... (8 %)
+Writing at 0x0002b074... (11 %)
+Writing at 0x000340e8... (13 %)
+Writing at 0x0003cc0a... (16 %)
+Writing at 0x000427f7... (19 %)
+Writing at 0x000482fe... (22 %)
+Writing at 0x0004dc77... (25 %)
+Writing at 0x00053b3e... (27 %)
+Writing at 0x00059785... (30 %)
+Writing at 0x0005f503... (33 %)
+Writing at 0x00065df2... (36 %)
+Writing at 0x0006bad6... (38 %)
+Writing at 0x00071826... (41 %)
+Writing at 0x00076f64... (44 %)
+Writing at 0x0007c1c7... (47 %)
+Writing at 0x00081871... (50 %)
+Writing at 0x00086aa8... (52 %)
+Writing at 0x0008c1a8... (55 %)
+Writing at 0x0009176d... (58 %)
+Writing at 0x00096ff7... (61 %)
+Writing at 0x0009ce15... (63 %)
+Writing at 0x000a2752... (66 %)
+Writing at 0x000a84c1... (69 %)
+Writing at 0x000ae1df... (72 %)
+Writing at 0x000b3a40... (75 %)
+Writing at 0x000b9685... (77 %)
+Writing at 0x000bf24e... (80 %)
+Writing at 0x000c4d8d... (83 %)
+Writing at 0x000ca8a6... (86 %)
+Writing at 0x000d4cf0... (88 %)
+Writing at 0x000dd215... (91 %)
+Writing at 0x000e2d5d... (94 %)
+Writing at 0x000e8e65... (97 %)
+Writing at 0x000ee782... (100 %)
+Wrote 931856 bytes (588434 compressed) at 0x00010000 in 14.6 seconds (effective 511.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 521.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+s\esptool_py && D:\esp\tools\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/esp/esp-idf-v5.3.1 -D SERIAL_TOOL=D:/esp/tools/python_env/idf5.3_py3.11_env/Scripts/python.exe;;D:/esp/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Users/ASUS/workspace/Project_PMU_Demo/build -P D:/esp/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"

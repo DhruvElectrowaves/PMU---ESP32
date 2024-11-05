@@ -1,0 +1,623 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_F�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF GIT-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  4 2024 09:10:41[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24e8ch (151180) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00034eb4 vaddr=3ffb0000 size=03f20h ( 16160) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038ddc vaddr=40080000 size=0723ch ( 29244) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2510h (664848) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000e2538 vaddr=4008723c size=10254h ( 66132) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     Project_PMU_Demo[0m
+[0;32mI (470) app_init: App version:      1[0m
+[0;32mI (474) app_init: Compile time:     Nov  4 2024 09:10:07[0m
+[0;32mI (480) app_init: ELF file SHA256:  d4c5ad6ec...[0m
+[0;32mI (485) app_init: ESP-IDF:          GIT-NOTFOUND[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (495) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB8730 len 000278D0 (158 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 40097490 len 00008B70 (34 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;33mW (552) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (566) main_task: Started on CPU0[0m
+[0;32mI (576) main_task: Calling app_main()[0m
+[0;32mI (576) MQTT_CHARGER: Starting MQTT Charger Example - By Dhruv[0m
+[0;32mI (626) wifi:wifi driver task: 3ffc0800, prio:23, stack:6656, core=0[0m
+[0;32mI (636) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (646) wifi:wifi certification version: v7.0[0m
+[0;32mI (646) wifi:config NVS flash: enabled[0m
+[0;32mI (646) wifi:config nano formating: disabled[0m
+[0;32mI (646) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (646) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (656) wifi:Init management short buffer num: 32[0m
+[0;32mI (656) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (666) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (666) wifi:Init static rx buffer num: 10[0m
+[0;32mI (666) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (676) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: accept mbox: 6[0m
+[0;32mI (686) wifi_init: tcpip mbox: 32[0m
+[0;32mI (686) wifi_init: udp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp mbox: 6[0m
+[0;32mI (696) wifi_init: tcp tx win: 5760[0m
+[0;32mI (696) wifi_init: tcp rx win: 5760[0m
+[0;32mI (706) wifi_init: tcp mss: 1440[0m
+[0;32mI (706) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (706) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (716) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (726) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (816) wifi:mode : sta (d4:8a:fc:c6:34:a0)[0m
+[0;32mI (816) wifi:enable tsf[0m
+[0;32mI (816) MQTT_CHARGER: Connecting to WiFi...[0m
+[0;32mI (3236) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (5646) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (5816) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (5816) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (5816) mqtt_client: Error transport connect[0m
+[0;32mI (5826) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (5836) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=5745[0m
+[0;32mI (5866) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=32504[0m
+[0;32mI (5886) main_task: Returned from app_main()[0m
+[0;32mI (8066) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (10476) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (12896) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (15306) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (15886) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=14991[0m
+[0;32mI (15906) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=58078[0m
+[0;32mI (17726) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (20146) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (20826) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (20826) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (20826) mqtt_client: Error transport connect[0m
+[0;32mI (20836) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (22556) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (24976) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (25926) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=33761[0m
+[0;32mI (25946) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=20589[0m
+[0;32mI (27386) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (29806) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (32216) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (34636) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (35836) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (35836) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (35836) mqtt_client: Error transport connect[0m
+[0;32mI (35846) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (35966) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=36825[0m
+[0;32mI (35986) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=20359[0m
+[0;32mI (37056) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (39466) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (41876) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (44296) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (46006) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=3777[0m
+[0;32mI (46026) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=28144[0m
+[0;32mI (46716) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (49126) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (50846) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (50846) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (50846) mqtt_client: Error transport connect[0m
+[0;32mI (50856) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (51546) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (53956) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (56046) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=215[0m
+[0;32mI (56066) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=30522[0m
+[0;32mI (56376) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (58786) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (61206) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (63616) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (65856) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (65856) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (65856) mqtt_client: Error transport connect[0m
+[0;32mI (65866) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (66036) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (66086) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=59799[0m
+[0;32mI (66106) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=52655[0m
+[0;32mI (68446) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (70866) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (73276) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (75696) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (76126) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=28906[0m
+[0;32mI (76146) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=63292[0m
+[0;32mI (78116) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (80526) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (80866) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (80866) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (80866) mqtt_client: Error transport connect[0m
+[0;32mI (80876) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (82946) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (85356) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (86166) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=93[0m
+[0;32mI (86186) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=671[0m
+[0;32mI (87776) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (90186) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (92606) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (95016) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (95876) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (95876) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (95876) mqtt_client: Error transport connect[0m
+[0;32mI (95886) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (96206) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=52930[0m
+[0;32mI (96226) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=4413[0m
+[0;32mI (97436) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (99856) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (102266) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (104686) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (106246) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=10016[0m
+[0;32mI (106266) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=8163[0m
+[0;32mI (107096) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (109516) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (110886) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (110886) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (110886) mqtt_client: Error transport connect[0m
+[0;32mI (110896) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (111926) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (114346) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (116286) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=27567[0m
+[0;32mI (116306) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=12528[0m
+[0;32mI (116756) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (119176) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (121586) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (124006) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (125896) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (125896) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (125896) mqtt_client: Error transport connect[0m
+[0;32mI (125906) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (126326) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=29572[0m
+[0;32mI (126346) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=2128[0m
+[0;32mI (126416) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (128836) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (131246) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (133666) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (136076) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (136366) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=39[0m
+[0;32mI (136386) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=44965[0m
+[0;32mI (138496) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (140906) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (140906) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (140906) mqtt_client: Error transport connect[0m
+[0;32mI (140916) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (140916) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (143336) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (145746) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (146406) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=8509[0m
+[0;32mI (146426) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=3964[0m
+[0;32mI (148166) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (150586) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (150926) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (150926) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (150926) mqtt_client: Error transport connect[0m
+[0;32mI (150936) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (152996) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (155416) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (156446) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=18182[0m
+[0;32mI (156466) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=41546[0m
+[0;32mI (157826) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (160246) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (162656) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (165076) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (165936) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (165936) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (165936) mqtt_client: Error transport connect[0m
+[0;32mI (165946) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (166486) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=31360[0m
+[0;32mI (166506) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=37956[0m
+[0;32mI (167486) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (169906) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (172316) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (174736) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (174746) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (174746) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (174756) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (174766) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (174786) wifi:connected with ApnaBanda, aid = 1, channel 6, BW20, bssid = 22:1a:3d:e5:f4:9b[0m
+[0;32mI (174786) wifi:security: WPA2-PSK, phy: bgn, rssi: -46[0m
+[0;32mI (174796) wifi:pm start, type: 1[0m
+
+[0;32mI (174796) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (174836) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (174836) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (175806) esp_netif_handlers: sta ip: 192.168.101.244, mask: 255.255.255.0, gw: 192.168.101.123[0m
+[0;32mI (175806) MQTT_CHARGER: Connected to WiFi with IP Address: 192.168.101.244[0m
+[0;32mI (176526) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=12393[0m
+[0;32mI (176546) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=14375[0m
+[0;32mI (181186) wifi:<ba-add>idx:0 (ifx:0, 22:1a:3d:e5:f4:9b), tid:0, ssn:3, winSize:64[0m
+[0;31mE (191616) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned 0[0m
+[0;31mE (191616) mqtt_client: MQTT connect failed[0m
+[0;32mI (191616) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (191616) MQTT_CHARGER: Published to topic chargerPeriodicData/charger123 with payload {
+	"ACMeterReading":	150.5,
+	"DCMeterReading":	120.69999694824219,
+	"GridVoltage":	230,
+	"GridCurrent":	5,
+	"DCVoltage":	480,
+	"DCCurrent":	10,
+	"CMS":	"CMS_001",
+	"ConnectorStatus":	1,
+	"PowerModuleData":	{
+		"Module1":	95,
+		"Module2":	100
+	}
+}, msg_id=45498[0m
+[0;32mI (191646) MQTT_CHARGER: Published to topic chargerStatus/charger123 with payload {
+	"connectorStatus0":	1,
+	"connectorStatus1":	2,
+	"connectorStatus2":	3,
+	"connectorStatus3":	4,
+	"webSocketStatus":	1
+}, msg_id=54163[0m
