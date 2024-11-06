@@ -1,0 +1,531 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOTets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  5 2024 12:00:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2504ch (151628) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00035074 vaddr=3ffb0000 size=03f40h ( 16192) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038fbc vaddr=40080000 size=0705ch ( 28764) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2a2ch (666156) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000e2a54 vaddr=4008705c size=10434h ( 66612) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (462) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (462) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     Project_PMU_Demo[0m
+[0;32mI (470) app_init: App version:      1[0m
+[0;32mI (474) app_init: Compile time:     Nov  5 2024 12:00:04[0m
+[0;32mI (480) app_init: ELF file SHA256:  243899c7a...[0m
+[0;32mI (486) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (501) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8770 len 00027890 (158 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 40097490 len 00008B70 (34 KiB): IRAM[0m
+[0;32mI (546) spi_flash: detected chip: generic[0m
+[0;32mI (549) spi_flash: flash io: dio[0m
+[0;33mW (553) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (567) main_task: Started on CPU0[0m
+[0;32mI (577) main_task: Calling app_main()[0m
+[0;32mI (577) MQTT_CHARGER: Starting MQTT Charger Example - By Dhruv[0m
+The values is : 120.699997I (627) wifi:wifi driver task: 3ffc0910, prio:23, stack:6656, core=0
+[0;32mI (637) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (647) wifi:wifi certification version: v7.0[0m
+[0;32mI (647) wifi:config NVS flash: enabled[0m
+[0;32mI (647) wifi:config nano formating: disabled[0m
+[0;32mI (647) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (647) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (657) wifi:Init management short buffer num: 32[0m
+[0;32mI (657) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (667) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (667) wifi:Init static rx buffer num: 10[0m
+[0;32mI (667) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (677) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: accept mbox: 6[0m
+[0;32mI (687) wifi_init: tcpip mbox: 32[0m
+[0;32mI (687) wifi_init: udp mbox: 6[0m
+[0;32mI (687) wifi_init: tcp mbox: 6[0m
+[0;32mI (697) wifi_init: tcp tx win: 5760[0m
+[0;32mI (697) wifi_init: tcp rx win: 5760[0m
+[0;32mI (707) wifi_init: tcp mss: 1440[0m
+[0;32mI (707) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (707) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (717) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (727) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (817) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (867) wifi:mode : sta (d4:8a:fc:c6:34:a0)[0m
+[0;32mI (867) wifi:enable tsf[0m
+[0;32mI (877) MQTT_CHARGER: Connecting to WiFi...[0m
+[0;32mI (3287) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (5707) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (5877) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (5877) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (5877) mqtt_client: Error transport connect[0m
+[0;32mI (5887) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (5887) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16466[0m
+[0;32mI (5897) main_task: Returned from app_main()[0m
+[0;32mI (8117) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (10537) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (12947) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (15367) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (15897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13102[0m
+[0;32mI (17777) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (20197) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (20887) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (20887) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (20887) mqtt_client: Error transport connect[0m
+[0;32mI (20897) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (22617) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (25027) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (25897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=22510[0m
+[0;32mI (27447) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (29857) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (32277) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (34687) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (35897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2497[0m
+[0;31mE (35897) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (35897) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (35907) mqtt_client: Error transport connect[0m
+[0;32mI (35917) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (37107) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (39517) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (41937) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (44347) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (45897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6433[0m
+[0;32mI (46767) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (49177) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (50917) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (50917) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (50917) mqtt_client: Error transport connect[0m
+[0;32mI (50927) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (51587) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (54007) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (55897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48451[0m
+[0;32mI (56417) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (58837) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (61247) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (63667) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (65897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2945[0m
+[0;31mE (65927) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (65927) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (65927) mqtt_client: Error transport connect[0m
+[0;32mI (65937) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (66077) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (68497) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (70907) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (73327) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (75737) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (75897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47073[0m
+[0;32mI (78157) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (80567) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (80937) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (80937) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (80937) mqtt_client: Error transport connect[0m
+[0;32mI (80947) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (82987) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (85397) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (85897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16176[0m
+[0;32mI (87817) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (90227) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (92647) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (95057) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (95897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16466[0m
+[0;31mE (95947) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (95947) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (95947) mqtt_client: Error transport connect[0m
+[0;32mI (95957) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (97477) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (99887) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (102307) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (104727) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (105897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28036[0m
+[0;32mI (107137) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (109547) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (110957) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (110957) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (110957) mqtt_client: Error transport connect[0m
+[0;32mI (110967) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (111967) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (114377) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (115897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13019[0m
+[0;32mI (116797) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (119217) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (121627) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (124047) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (125897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=37853[0m
+[0;31mE (125967) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (125967) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (125967) mqtt_client: Error transport connect[0m
+[0;32mI (125977) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (126457) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (128877) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (131287) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (133707) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (135897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=46510[0m
+[0;32mI (136117) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (138537) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (140947) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (140977) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (140977) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (140977) mqtt_client: Error transport connect[0m
+[0;32mI (140987) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (143367) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (145777) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (145897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=34514[0m
+[0;32mI (148197) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (150607) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (153027) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (155437) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (155897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41859[0m
+[0;31mE (155987) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (155987) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (155987) mqtt_client: Error transport connect[0m
+[0;32mI (155997) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (157857) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (160267) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (162687) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (165097) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (165897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29073[0m
+[0;32mI (167517) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (169927) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (170997) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (170997) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (170997) mqtt_client: Error transport connect[0m
+[0;32mI (171007) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (172347) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (174757) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (175897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55185[0m
+[0;32mI (177177) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (179587) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (182007) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (184417) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (185897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55457[0m
+[0;31mE (186007) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (186007) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (186007) mqtt_client: Error transport connect[0m
+[0;32mI (186017) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (186837) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (189247) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (191667) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (194077) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (195897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=23481[0m
+[0;32mI (196497) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (198907) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (201017) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (201017) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (201017) mqtt_client: Error transport connect[0m
+[0;32mI (201027) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (201327) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (203737) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (205897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54998[0m
+[0;32mI (206157) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (208567) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (210987) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (213397) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (215817) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (215897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=37497[0m
+[0;31mE (216027) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (216027) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (216027) mqtt_client: Error transport connect[0m
+[0;32mI (216037) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (218227) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (220647) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (223057) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (225477) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (225897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24132[0m
+[0;32mI (227887) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (230307) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (231037) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (231037) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (231037) mqtt_client: Error transport connect[0m
+[0;32mI (231047) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (232717) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (235137) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (235897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=10390[0m
+[0;32mI (237547) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (239967) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (242377) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (244797) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (245897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47937[0m
+[0;31mE (246047) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (246047) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (246047) mqtt_client: Error transport connect[0m
+[0;32mI (246057) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (247207) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (249627) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (252037) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (254457) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (255897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=44158[0m
+[0;32mI (256867) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (259287) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (261057) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (261057) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (261057) mqtt_client: Error transport connect[0m
+[0;32mI (261067) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (261697) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (264117) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (265897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36762[0m
+[0;32mI (266527) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (268947) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (271357) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (273777) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (275897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36881[0m
+[0;31mE (276067) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (276067) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (276067) mqtt_client: Error transport connect[0m
+[0;32mI (276077) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (276187) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (278607) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (281017) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (283437) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (285847) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (285897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=59773[0m
+[0;32mI (288267) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (290677) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (291077) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (291077) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (291077) mqtt_client: Error transport connect[0m
+[0;32mI (291087) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (293097) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (295507) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (295897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=31107[0m
+[0;32mI (297927) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (300337) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (302757) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (305167) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (305897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=8925[0m
+[0;31mE (306087) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (306087) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (306087) mqtt_client: Error transport connect[0m
+[0;32mI (306097) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (307587) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (309997) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (312417) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (314827) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (315897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36646[0m
+[0;32mI (317247) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (319657) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (321097) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (321097) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (321097) mqtt_client: Error transport connect[0m
+[0;32mI (321107) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (322077) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (324487) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (325897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20135[0m
+[0;32mI (326907) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (329317) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (331737) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (334147) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (335897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62814[0m
+[0;31mE (336107) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (336107) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (336107) mqtt_client: Error transport connect[0m
+[0;32mI (336117) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (336567) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (338977) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (341397) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (343817) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (345897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=50810[0m
+[0;32mI (346227) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (348647) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (351057) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (351117) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (351117) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (351117) mqtt_client: Error transport connect[0m
+[0;32mI (351127) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (353477) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (355887) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (355897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=22143[0m
+[0;32mI (358307) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (360717) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (363137) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (365547) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (365897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=58442[0m
+[0;31mE (366127) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (366127) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (366127) mqtt_client: Error transport connect[0m
+[0;32mI (366137) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (367967) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (370377) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (372797) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (375207) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (375897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=25258[0m
+[0;32mI (377627) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (380037) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (381137) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (381137) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (381137) mqtt_client: Error transport connect[0m
+[0;32mI (381147) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (382457) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (384867) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (385897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60425[0m
+[0;32mI (387287) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (389697) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (392117) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (394527) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (395897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47473[0m
+[0;31mE (396147) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (396147) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (396147) mqtt_client: Error transport connect[0m
+[0;32mI (396157) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (396947) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (399357) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (401777) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (404187) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (405897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48329[0m
+[0;32mI (406607) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (409017) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (411157) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (411157) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (411157) mqtt_client: Error transport connect[0m
+[0;32mI (411167) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (411437) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (413847) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (415897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=43907[0m
+[0;32mI (416267) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (418677) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (421097) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (423507) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (425897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=22308[0m
+[0;32mI (425927) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (426167) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (426167) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (426167) mqtt_client: Error transport connect[0m
+[0;32mI (426177) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (428347) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (430757) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (433177) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (435587) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (435897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=228[0m
+[0;32mI (438007) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (440417) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (441177) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (441177) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (441177) mqtt_client: Error transport connect[0m
+[0;32mI (441187) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (442837) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (445247) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (445897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29784[0m
+[0;32mI (447667) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (450077) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (452497) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (454907) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (455897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5980[0m
+[0;31mE (456187) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (456187) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (456187) mqtt_client: Error transport connect[0m
+[0;32mI (456197) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (457327) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (459737) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (462157) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (464567) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (465897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29818[0m
+[0;32mI (466987) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (469397) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (471197) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (471197) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (471197) mqtt_client: Error transport connect[0m
+[0;32mI (471207) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (471817) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (474227) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (475897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21007[0m
+[0;32mI (476647) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (479057) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (481477) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (483887) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (485897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5876[0m
+[0;31mE (486207) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (486207) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (486207) mqtt_client: Error transport connect[0m
+[0;32mI (486217) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (486307) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (488717) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (491137) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (493547) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (495897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=32833[0m
+[0;32mI (495967) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (498377) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (500797) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (501217) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (501217) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (501217) mqtt_client: Error transport connect[0m
+[0;32mI (501227) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (503207) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (505627) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (505897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=3679[0m
+[0;32mI (508037) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (510457) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (512867) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (515287) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (515897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=4112[0m
+[0;31mE (516227) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (516227) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (516227) mqtt_client: Error transport connect[0m
+[0;32mI (516237) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (517697) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (520117) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (522527) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (524947) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (525897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=44013[0m
+[0;32mI (527357) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (529777) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (531237) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (531237) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (531237) mqtt_client: Error transport connect[0m
+[0;32mI (531247) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (532187) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (534607) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (535897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29795[0m
+[0;32mI (537017) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (539437) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (541847) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (544267) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (545897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=45738[0m
+[0;31mE (546247) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (546247) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (546247) mqtt_client: Error transport connect[0m
+[0;32mI (546257) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (546677) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (549097) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (551507) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (553927) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (555897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56272[0m
+[0;32mI (556337) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (558757) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (561167) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;31mE (561257) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (561257) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (561257) mqtt_client: Error transport connect[0m
+[0;32mI (561267) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (563587) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m
+[0;32mI (565897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=49169[0m
+[0;32mI (565997) MQTT_CHARGER: Disconnected from WiFi, attempting to reconnect...[0m

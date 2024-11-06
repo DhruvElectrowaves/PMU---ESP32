@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <string.h>
+#include <math.h>
 #include "esp_wifi.h"
 #include "esp_system.h"
 #include "nvs_flash.h"
@@ -32,16 +33,20 @@ const char *wifi_password = "12345abc";
 const char *mqtt_broker_uri = "mqtt://broker.hivemq.com:1883"; // Update with your broker address
 
 // Example charger data (replace these with actual sensor readings in a real application)
-float ac_meter_reading = 150.5;
-float dc_meter_reading = 120.7;
-float grid_voltage = 230.0;
-float grid_current = 5.0;
-float dc_voltage = 480.0;
-float dc_current = 10.0;
+double ac_meter_reading = 150.5;
+double dc_meter_reading = 120.7;
+double grid_voltage = 230.0;
+double grid_current = 5.31;
+double dc_voltage = 480.45;
+double dc_current = 10.0;
 const char *cms_name = "CMS_001";
 int connector_status = 1;
-float power_module1_data = 95.0;
-float power_module2_data = 100.0;
+double power_module1_data = 95.8;
+double power_module2_data = 100.6;
+
+char charger_Id[20];  // Variable to store the value of charger_iD
+int flag1_Check=0;  // This is the flag when rises when charger iD is received.
+char Serial_Number[] = "EWE01" ;  // This variable would hold the value of serial Number received . 
 
 // Example charger Connector Status Data (replace these with actual sensor readings in a real application)
 typedef enum {
@@ -143,6 +148,26 @@ typedef enum {
 	REASON_CFE117 = 50
 } FinishReason;
 
+typedef enum{
+	POWER_MODULE_DATA=0,
+	POWER_MODULE_DATA_1 = 1,
+	POWER_MODULE_DATA_2 = 2,
+	POWER_MODULE_DATA_3 = 3,
+	POWER_MODULE_DATA_4 = 4,
+	POWER_MODULE_DATA_5 = 5,
+	POWER_MODULE_DATA_6 = 6,
+	POWER_MODULE_DATA_7 = 7,
+	POWER_MODULE_DATA_8 = 8,
+	POWER_MODULE_DATA_9 = 9,
+	POWER_MODULE_DATA_10 = 10,
+	EV_EVSE_COMM_CONTROLLER = 11,
+	EV_EVSE_COMM_CONTROLLER_1 = 12,
+	EV_EVSE_COMM_CONTROLLER_2 = 13,
+	OCPP_CONTROLLER = 14,
+	WEBSOCKET_CONNECTION = 15,
+	GRID_SUPPLY = 16
+} componentName;
+
 Connector connector = CONNECTOR_1;
 
 Event event = STARTED ;
@@ -159,12 +184,6 @@ FaultStatus faultStatus0 = FAULT_NOERROR;
 FaultStatus faultStatus1 = FAULT_BATTERY_OVER_CURRENT;
 FaultStatus faultStatus2 = FAULT_CANA_FAILED;
 FaultStatus faultStatus3 = FAULT_SMOKE_FAULT;
-
-
-float truncate_to_two_decimals(float value) {
-    return (float)((int)(value * 100)) / 100;
-}
-
 
 void wifi_event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data) 
 {
@@ -227,19 +246,40 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
             ESP_LOGI(TAG, "MQTT connected");
             
             // Subscribe to the CMS topic (replace "setChargerId/SerialNumber" with the actual topic name from the CMS)
-         	int msg_subscribe_id = esp_mqtt_client_subscribe(mqtt_client, "setChargerId/serialNumber", 1);
+       		char sub_topic1[50];
+            snprintf(sub_topic1, sizeof(sub_topic1), "setChargerId/%s", Serial_Number);
+            int msg_subscribe_id = esp_mqtt_client_subscribe(mqtt_client, sub_topic1, 1);
          	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id);
-         	break;
          	
+         	// Subscribe to the CMS topic "getComponentStatus/chargerId" 
+         	// This topic send the name of component whose status is required.
+         	char sub_topic2[50];
+         	snprintf(sub_topic2, sizeof(sub_topic2), "getComponentStatus/%s" ,charger_Id);
+         	int msg_subscribe_id2 = esp_mqtt_client_subscribe(mqtt_client, sub_topic2, 1);
+         	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id2);
+         	
+         	//Subscribe to the CMS topic "OTA/chargeId"
+         	//This topic sends the OTA for a particular charger
+         	char sub_topic3[50];
+         	snprintf(sub_topic3, sizeof(sub_topic3), "OTA/%s", charger_Id);
+         	int msg_subscribe_id3 = esp_mqtt_client_subscribe(mqtt_client, sub_topic3, 1);
+         	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id3);
+         	
+         	break;
+			
         case MQTT_EVENT_DISCONNECTED:
             ESP_LOGI(TAG, "MQTT disconnected");
             break;
             
      	case MQTT_EVENT_DATA:
             ESP_LOGI(TAG, "Received data from topic: %.*s", event->topic_len, event->topic);
-            ESP_LOGI(TAG, "Serial Number: %.*s", event->data_len, event->data);
+            ESP_LOGI(TAG, "Charger Id: %.*s", event->data_len, event->data);
         
-            cJSON *json = cJSON_ParseWithLength(event->data, event->data_len);
+            strncpy(charger_Id, event->data, event->data_len);
+            charger_Id[event->data_len] = '\0';  // Null-terminate the string
+        	flag1_Check=1;
+        
+  /*          cJSON *json = cJSON_ParseWithLength(event->data, event->data_len);
 	    if (json == NULL) {
     	    ESP_LOGE(TAG, "Error parsing JSON data from CMS");
     	    return;
@@ -247,9 +287,9 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
 
 		    cJSON *serial_json = cJSON_GetObjectItem(json, "serialNumber");
         if (cJSON_IsString(serial_json) && (serial_json->valuestring != NULL)) {
-    	    ESP_LOGI(TAG, "Serial Number: %s", serial_json->valuestring);
+    	    ESP_LOGI(TAG, "Charger Id: %s", serial_json->valuestring);
     	    // Use the serial number for further actions
-	   }
+	   }*/
 		    break;
 		    
 		default:
@@ -261,6 +301,7 @@ void init_mqtt()
 {
     esp_mqtt_client_config_t mqtt_cfg = {
         .broker.address.uri = mqtt_broker_uri,
+        .session.keepalive = 120
     };
     mqtt_client = esp_mqtt_client_init(&mqtt_cfg);
     esp_mqtt_client_register_event(mqtt_client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
@@ -273,12 +314,12 @@ void prepare_mqtt_data(char *unique_charger_id, char *topic, char *payload) {
 //    char dc_meter_reading_str[10];
 //    snprintf(dc_meter_reading_str, sizeof(dc_meter_reading_str), "%.2f", dc_meter_reading);
 
-      int scaled_value = (int)(dc_meter_reading * 100 + 0.5);  // Scale and round
+//      int scaled_value = (int)(dc_meter_reading * 100 + 0.5);  // Scale and round
 
     // Construct the JSON payload using cJSON library
     cJSON *root = cJSON_CreateObject();
     cJSON_AddNumberToObject(root, "ACMeterReading", ac_meter_reading);
-    cJSON_AddNumberToObject(root, "DCMeterReading", scaled_value);
+    cJSON_AddNumberToObject(root, "DCMeterReading", dc_meter_reading);
     cJSON_AddNumberToObject(root, "GridVoltage", grid_voltage);
     cJSON_AddNumberToObject(root, "GridCurrent", grid_current);
     cJSON_AddNumberToObject(root, "DCVoltage", dc_voltage);
@@ -391,6 +432,21 @@ void prepare_mqtt_charging_session_data(char *unique_charger_id, char *charging_
     cJSON_Delete(charging_session_root);
 }
 
+void prepare_mqtt_get_Charger_Id_data(char *unique_serial_number, char *get_Charger_Id_topic, char *get_Charger_Id_payload){
+	// Construct the MQTT topic
+    snprintf(get_Charger_Id_topic, 50, "getChargerId/%s", unique_serial_number);
+	
+   // Construct the JSON payload using cJSON library
+    cJSON *get_chargerId_root = cJSON_CreateObject();
+    if (get_chargerId_root == NULL) {
+        return;
+    }
+
+	// Convert empty JSON object to string
+    strcpy(get_Charger_Id_payload, cJSON_PrintUnformatted(get_chargerId_root)); //converts this empty JSON object to a JSON string which represent an empty message
+    cJSON_Delete(get_chargerId_root);
+}
+
 
 
 void mqtt_publish_task(void *param) {
@@ -405,20 +461,32 @@ void mqtt_publish_task(void *param) {
 	char charging_session_topic[50];
 	char charging_session_payload[256];
 	
+	char get_Charger_Id_topic[50];
+	char get_Charger_Id_payload[256];
+	
     while (1) {
-        prepare_mqtt_data("charger123", topic, payload); // Use actual charger ID
-        
-        prepare_mqtt_Status_data("charger123", status_topic, status_payload);
-
-		prepare_mqtt_charging_session_data("charger123", charging_session_topic , charging_session_payload);
-
-        int msg_id = esp_mqtt_client_publish(mqtt_client, topic, payload, 0, 1, 0);
-        int msg_id2 = esp_mqtt_client_publish(mqtt_client, status_topic, status_payload, 0, 1, 0);
-        int msg_id3 = esp_mqtt_client_publish(mqtt_client, charging_session_topic, charging_session_payload, 0, 1, 0);
+		
+		prepare_mqtt_get_Charger_Id_data(Serial_Number, get_Charger_Id_topic, get_Charger_Id_payload);
+		int msg_id0 = esp_mqtt_client_publish(mqtt_client, get_Charger_Id_topic, get_Charger_Id_payload, 0, 1, 0);
+		ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", get_Charger_Id_topic, get_Charger_Id_payload, msg_id0);
+		 
+		if(charger_Id[0] != '\0' && flag1_Check == 1){
+			
+        prepare_mqtt_data(charger_Id, topic, payload); // Use actual charger ID
+		int msg_id = esp_mqtt_client_publish(mqtt_client, topic, payload, 0, 1, 0);
         ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", topic, payload, msg_id);
+        
+        prepare_mqtt_Status_data(charger_Id, status_topic, status_payload);
+        int msg_id2 = esp_mqtt_client_publish(mqtt_client, status_topic, status_payload, 0, 1, 0);
 		ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", status_topic, status_payload, msg_id2);
+		
+		prepare_mqtt_charging_session_data(charger_Id, charging_session_topic , charging_session_payload);
+        int msg_id3 = esp_mqtt_client_publish(mqtt_client, charging_session_topic, charging_session_payload, 0, 1, 0);
 		ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", charging_session_topic, charging_session_payload, msg_id3);
+		
+		}
         vTaskDelay(xDelay); // Delay for periodic publish
+        
     }
 }
 
