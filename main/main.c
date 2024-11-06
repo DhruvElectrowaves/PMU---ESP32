@@ -47,6 +47,11 @@ double power_module2_data = 100.6;
 char charger_Id[20];  // Variable to store the value of charger_iD
 int flag1_Check=0;  // This is the flag when rises when charger iD is received.
 char Serial_Number[] = "EWE01" ;  // This variable would hold the value of serial Number received . 
+int component_Id ; // To Store the ID of component whose status CMS wants to know 
+
+char sub_topic1[50];
+char sub_topic2[50];
+char sub_topic3[50];
 
 // Example charger Connector Status Data (replace these with actual sensor readings in a real application)
 typedef enum {
@@ -59,8 +64,9 @@ typedef enum {
 } ConnectorStatus;
 
 typedef enum {
-	WEBSOCKET_CONNECTED = 1,
-	WEBSOCKET_DISCONNECTED = 2
+	WEBSOCKET_CONNECTED = 0,
+	WEBSOCKET_DISCONNECTED = 1,
+	NO_INTERNET = 2
 }WebSocketStatus;
 
 typedef enum {
@@ -168,6 +174,26 @@ typedef enum{
 	GRID_SUPPLY = 16
 } componentName;
 
+typedef enum{
+	FAILED = 0,
+	FINE = 1
+}ocppController;
+
+typedef enum{
+	FAILED_CAN = 0,
+	FINE_CAN = 1
+}canCommunication ;
+
+typedef enum{
+	ETH_LINK_DOWN_DETECTED = 104,
+	POWERED_UP_ON_STATE_B = 101
+}errorCode0;
+
+typedef enum{
+	UNAVAILABLE = 0,
+	AVAILABLE = 1
+}gridSupply;
+
 Connector connector = CONNECTOR_1;
 
 Event event = STARTED ;
@@ -242,43 +268,70 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     
     switch(event->event_id) {
 		
-		case MQTT_EVENT_CONNECTED:
+		case MQTT_EVENT_CONNECTED:{
             ESP_LOGI(TAG, "MQTT connected");
             
             // Subscribe to the CMS topic (replace "setChargerId/SerialNumber" with the actual topic name from the CMS)
-       		char sub_topic1[50];
+       		
             snprintf(sub_topic1, sizeof(sub_topic1), "setChargerId/%s", Serial_Number);
             int msg_subscribe_id = esp_mqtt_client_subscribe(mqtt_client, sub_topic1, 1);
          	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id);
          	
          	// Subscribe to the CMS topic "getComponentStatus/chargerId" 
          	// This topic send the name of component whose status is required.
-         	char sub_topic2[50];
+         	
          	snprintf(sub_topic2, sizeof(sub_topic2), "getComponentStatus/%s" ,charger_Id);
          	int msg_subscribe_id2 = esp_mqtt_client_subscribe(mqtt_client, sub_topic2, 1);
          	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id2);
          	
          	//Subscribe to the CMS topic "OTA/chargeId"
          	//This topic sends the OTA for a particular charger
-         	char sub_topic3[50];
+         	
          	snprintf(sub_topic3, sizeof(sub_topic3), "OTA/%s", charger_Id);
          	int msg_subscribe_id3 = esp_mqtt_client_subscribe(mqtt_client, sub_topic3, 1);
          	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id3);
          	
          	break;
-			
-        case MQTT_EVENT_DISCONNECTED:
+		}
+		
+        case MQTT_EVENT_DISCONNECTED:{
             ESP_LOGI(TAG, "MQTT disconnected");
             break;
+          }
             
-     	case MQTT_EVENT_DATA:
+     	case MQTT_EVENT_DATA:{
+     	
             ESP_LOGI(TAG, "Received data from topic: %.*s", event->topic_len, event->topic);
-            ESP_LOGI(TAG, "Charger Id: %.*s", event->data_len, event->data);
-        
-            strncpy(charger_Id, event->data, event->data_len);
-            charger_Id[event->data_len] = '\0';  // Null-terminate the string
-        	flag1_Check=1;
-        
+            ESP_LOGI(TAG, "Data: %.*s", event->data_len, event->data);
+            
+            // Copy topic and data into null-terminated strings
+    		char original_topic[event->topic_len + 1];
+    		strncpy(original_topic, event->topic, event->topic_len);
+    		original_topic[event->topic_len] = '\0';
+
+    		char original_data[event->data_len + 1];
+    		strncpy(original_data, event->data, event->data_len);
+    		original_data[event->data_len] = '\0';
+    		
+    		// Check the topic to process data accordingly
+    		if (strcmp(original_topic, sub_topic1) == 0) {
+       			ESP_LOGI(TAG, "Data received for topic setChargerId");
+        		strncpy(charger_Id, original_data, sizeof(charger_Id) - 1);
+                charger_Id[sizeof(charger_Id) - 1] = '\0';  // Null-terminate
+                flag1_Check = 1;
+                
+        }   else if (strcmp(original_topic, sub_topic2) == 0) {
+        		ESP_LOGI(TAG, "Data received for topic getComponentStatus ");
+        	    component_Id = atoi(original_data);
+        	    printf("The component id is %d" , component_Id);
+        	    //further processing can be done		
+        	    
+    	}   else if (strcmp(original_topic, sub_topic3) == 0) {
+        		ESP_LOGI(TAG, "Data received for topic OTA ");
+        		printf("You can write the further processing");
+        	    //further processing can be done		
+        }		
+   
   /*          cJSON *json = cJSON_ParseWithLength(event->data, event->data_len);
 	    if (json == NULL) {
     	    ESP_LOGE(TAG, "Error parsing JSON data from CMS");
@@ -291,10 +344,10 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     	    // Use the serial number for further actions
 	   }*/
 		    break;
-		    
+    }
 		default:
             break;   
-	  }
+  }
 }
 
 void init_mqtt() 
