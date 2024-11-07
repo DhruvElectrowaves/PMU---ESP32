@@ -269,40 +269,40 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     switch(event->event_id) {
 		
 		case MQTT_EVENT_CONNECTED:{
-            ESP_LOGI(TAG, "MQTT connected");
+                    ESP_LOGI(TAG, "MQTT connected");
             
             // Subscribe to the CMS topic (replace "setChargerId/SerialNumber" with the actual topic name from the CMS)
        		
-            snprintf(sub_topic1, sizeof(sub_topic1), "setChargerId/%s", Serial_Number);
-            int msg_subscribe_id = esp_mqtt_client_subscribe(mqtt_client, sub_topic1, 1);
-         	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id);
+        	    snprintf(sub_topic1, sizeof(sub_topic1), "setChargerId/%s", Serial_Number);
+                    int msg_subscribe_id = esp_mqtt_client_subscribe(mqtt_client, sub_topic1, 1);
+         	    ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id);
          	
          	// Subscribe to the CMS topic "getComponentStatus/chargerId" 
          	// This topic send the name of component whose status is required.
          	
-         	snprintf(sub_topic2, sizeof(sub_topic2), "getComponentStatus/%s" ,charger_Id);
-         	int msg_subscribe_id2 = esp_mqtt_client_subscribe(mqtt_client, sub_topic2, 1);
-         	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id2);
+         	    snprintf(sub_topic2, sizeof(sub_topic2), "getComponentStatus/%s" ,charger_Id);
+         	    int msg_subscribe_id2 = esp_mqtt_client_subscribe(mqtt_client, sub_topic2, 1);
+         	    ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id2);
          	
          	//Subscribe to the CMS topic "OTA/chargeId"
          	//This topic sends the OTA for a particular charger
          	
-         	snprintf(sub_topic3, sizeof(sub_topic3), "OTA/%s", charger_Id);
-         	int msg_subscribe_id3 = esp_mqtt_client_subscribe(mqtt_client, sub_topic3, 1);
-         	ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id3);
+         	    snprintf(sub_topic3, sizeof(sub_topic3), "OTA/%s", charger_Id);
+         	    int msg_subscribe_id3 = esp_mqtt_client_subscribe(mqtt_client, sub_topic3, 1);
+         	    ESP_LOGI(TAG, "Subscribed to CMS topic with msg_id=%d", msg_subscribe_id3);
          	
          	break;
 		}
 		
-        case MQTT_EVENT_DISCONNECTED:{
-            ESP_LOGI(TAG, "MQTT disconnected");
-            break;
-          }
+        	case MQTT_EVENT_DISCONNECTED:{
+            	     ESP_LOGI(TAG, "MQTT disconnected");
+               break;
+           }
             
      	case MQTT_EVENT_DATA:{
      	
-            ESP_LOGI(TAG, "Received data from topic: %.*s", event->topic_len, event->topic);
-            ESP_LOGI(TAG, "Data: %.*s", event->data_len, event->data);
+                ESP_LOGI(TAG, "Received data from topic: %.*s", event->topic_len, event->topic);
+                ESP_LOGI(TAG, "Data: %.*s", event->data_len, event->data);
             
             // Copy topic and data into null-terminated strings
     		char original_topic[event->topic_len + 1];
@@ -317,13 +317,13 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
     		if (strcmp(original_topic, sub_topic1) == 0) {
        			ESP_LOGI(TAG, "Data received for topic setChargerId");
         		strncpy(charger_Id, original_data, sizeof(charger_Id) - 1);
-                charger_Id[sizeof(charger_Id) - 1] = '\0';  // Null-terminate
-                flag1_Check = 1;
+                        charger_Id[sizeof(charger_Id) - 1] = '\0';  // Null-terminate
+                        flag1_Check = 1;
                 
         }   else if (strcmp(original_topic, sub_topic2) == 0) {
         		ESP_LOGI(TAG, "Data received for topic getComponentStatus ");
-        	    component_Id = atoi(original_data);
-        	    printf("The component id is %d" , component_Id);
+        	        component_Id = atoi(original_data);
+        	        printf("The component id is %d" , component_Id);
         	    //further processing can be done		
         	    
     	}   else if (strcmp(original_topic, sub_topic3) == 0) {
