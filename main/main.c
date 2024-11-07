@@ -519,25 +519,25 @@ void mqtt_publish_task(void *param) {
 	
     while (1) {
 		
-		prepare_mqtt_get_Charger_Id_data(Serial_Number, get_Charger_Id_topic, get_Charger_Id_payload);
-		int msg_id0 = esp_mqtt_client_publish(mqtt_client, get_Charger_Id_topic, get_Charger_Id_payload, 0, 1, 0);
-		ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", get_Charger_Id_topic, get_Charger_Id_payload, msg_id0);
+	prepare_mqtt_get_Charger_Id_data(Serial_Number, get_Charger_Id_topic, get_Charger_Id_payload);
+	int msg_id0 = esp_mqtt_client_publish(mqtt_client, get_Charger_Id_topic, get_Charger_Id_payload, 0, 1, 0);
+	ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", get_Charger_Id_topic, get_Charger_Id_payload, msg_id0);
 		 
-		if(charger_Id[0] != '\0' && flag1_Check == 1){
+	if(charger_Id[0] != '\0' && flag1_Check == 1){
 			
-        prepare_mqtt_data(charger_Id, topic, payload); // Use actual charger ID
+                prepare_mqtt_data(charger_Id, topic, payload); // Use actual charger ID
 		int msg_id = esp_mqtt_client_publish(mqtt_client, topic, payload, 0, 1, 0);
-        ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", topic, payload, msg_id);
+                ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", topic, payload, msg_id);
         
-        prepare_mqtt_Status_data(charger_Id, status_topic, status_payload);
-        int msg_id2 = esp_mqtt_client_publish(mqtt_client, status_topic, status_payload, 0, 1, 0);
+       		prepare_mqtt_Status_data(charger_Id, status_topic, status_payload);
+        	int msg_id2 = esp_mqtt_client_publish(mqtt_client, status_topic, status_payload, 0, 1, 0);
 		ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", status_topic, status_payload, msg_id2);
 		
 		prepare_mqtt_charging_session_data(charger_Id, charging_session_topic , charging_session_payload);
-        int msg_id3 = esp_mqtt_client_publish(mqtt_client, charging_session_topic, charging_session_payload, 0, 1, 0);
+        	int msg_id3 = esp_mqtt_client_publish(mqtt_client, charging_session_topic, charging_session_payload, 0, 1, 0);
 		ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", charging_session_topic, charging_session_payload, msg_id3);
 		
-		}
+	}
         vTaskDelay(xDelay); // Delay for periodic publish
         
     }
