@@ -1,0 +1,2812 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_R�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  5 2024 12:00:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2512ch (151852) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00035154 vaddr=3ffb0000 size=03f60h ( 16224) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=000390bc vaddr=40080000 size=06f5ch ( 28508) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2ae4h (666340) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000e2b0c vaddr=40086f5c size=10534h ( 66868) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (462) cpu_start: Pro cpu start user code[0m
+[0;32mI (462) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (462) app_init: Application information:[0m
+[0;32mI (465) app_init: Project name:     Project_PMU_Demo[0m
+[0;32mI (470) app_init: App version:      1[0m
+[0;32mI (475) app_init: Compile time:     Nov  5 2024 12:00:04[0m
+[0;32mI (481) app_init: ELF file SHA256:  0e9fa5b5a...[0m
+[0;32mI (486) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (501) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8838 len 000277C8 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 40097490 len 00008B70 (34 KiB): IRAM[0m
+[0;32mI (546) spi_flash: detected chip: generic[0m
+[0;32mI (549) spi_flash: flash io: dio[0m
+[0;33mW (553) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (567) main_task: Started on CPU0[0m
+[0;32mI (577) main_task: Calling app_main()[0m
+[0;32mI (577) MQTT_CHARGER: Starting MQTT Charger Example - By Dhruv[0m
+[0;32mI (627) wifi:wifi driver task: 3ffc0908, prio:23, stack:6656, core=0[0m
+[0;32mI (637) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (647) wifi:wifi certification version: v7.0[0m
+[0;32mI (647) wifi:config NVS flash: enabled[0m
+[0;32mI (647) wifi:config nano formating: disabled[0m
+[0;32mI (647) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (647) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (657) wifi:Init management short buffer num: 32[0m
+[0;32mI (657) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (667) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (667) wifi:Init static rx buffer num: 10[0m
+[0;32mI (667) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (677) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: accept mbox: 6[0m
+[0;32mI (687) wifi_init: tcpip mbox: 32[0m
+[0;32mI (687) wifi_init: udp mbox: 6[0m
+[0;32mI (687) wifi_init: tcp mbox: 6[0m
+[0;32mI (697) wifi_init: tcp tx win: 5760[0m
+[0;32mI (697) wifi_init: tcp rx win: 5760[0m
+[0;32mI (707) wifi_init: tcp mss: 1440[0m
+[0;32mI (707) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (707) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (717) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (727) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (817) wifi:mode : sta (d4:8a:fc:c6:34:a0)[0m
+[0;32mI (817) wifi:enable tsf[0m
+[0;32mI (817) MQTT_CHARGER: Connecting to WiFi...[0m
+[0;32mI (837) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (837) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (847) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (857) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (877) wifi:connected with ApnaBanda, aid = 1, channel 6, BW20, bssid = d2:c2:e8:97:90:87[0m
+[0;32mI (877) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (887) wifi:pm start, type: 1[0m
+
+[0;32mI (887) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (897) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1907) esp_netif_handlers: sta ip: 192.168.137.149, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (1907) MQTT_CHARGER: Connected to WiFi with IP Address: 192.168.137.149[0m
+[0;32mI (5817) main_task: Returned from app_main()[0m
+[0;32mI (6127) wifi:<ba-add>idx:0 (ifx:0, d2:c2:e8:97:90:87), tid:0, ssn:4, winSize:64[0m
+[0;31mE (16637) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned 0[0m
+[0;31mE (16637) mqtt_client: MQTT connect failed[0m
+[0;32mI (16637) MQTT_CHARGER: MQTT disconnected[0m
+[0;32mI (16637) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60725[0m
+[0;32mI (16647) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=8360[0m
+[0;32mI (16657) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55314[0m
+[0;32mI (16667) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=46143[0m
+[0;32mI (16687) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5558[0m
+[0;32mI (16697) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=15394[0m
+[0;32mI (16707) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=19967[0m
+[0;32mI (16717) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=14080[0m
+[0;32mI (16727) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41767[0m
+[0;32mI (16737) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25340[0m
+[0;32mI (16757) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=45496[0m
+[0;32mI (16757) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=4475[0m
+[0;32mI (16777) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62803[0m
+[0;32mI (16787) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41106[0m
+[0;32mI (16797) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21495[0m
+[0;32mI (16807) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=16542[0m
+[0;32mI (16817) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=12070[0m
+[0;32mI (16827) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=19887[0m
+[0;32mI (16847) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=50440[0m
+[0;32mI (16847) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=30828[0m
+[0;32mI (16867) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56776[0m
+[0;32mI (16877) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=19047[0m
+[0;32mI (16887) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62360[0m
+[0;32mI (16897) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=16795[0m
+[0;32mI (16907) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54656[0m
+[0;32mI (16917) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=46090[0m
+[0;32mI (16937) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=61260[0m
+[0;32mI (16947) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=56073[0m
+[0;32mI (16957) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13308[0m
+[0;32mI (16967) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=34548[0m
+[0;32mI (16977) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=59279[0m
+[0;32mI (16987) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40873[0m
+[0;32mI (16997) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6057[0m
+[0;32mI (17007) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=30682[0m
+[0;32mI (17027) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=14611[0m
+[0;32mI (17037) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=45761[0m
+[0;32mI (17047) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=32869[0m
+[0;32mI (17057) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54561[0m
+[0;32mI (17067) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=40389[0m
+[0;32mI (17077) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=33166[0m
+[0;32mI (17087) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21730[0m
+[0;32mI (17097) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=48440[0m
+[0;32mI (17117) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21541[0m
+[0;32mI (17127) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=17511[0m
+[0;32mI (17137) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64137[0m
+[0;32mI (17147) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=32908[0m
+[0;32mI (17157) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=27745[0m
+[0;32mI (17167) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=30514[0m
+[0;32mI (17187) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62377[0m
+[0;32mI (17187) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31585[0m
+[0;32mI (17207) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=10851[0m
+[0;32mI (17217) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=9194[0m
+[0;32mI (17227) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=35693[0m
+[0;32mI (17237) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43026[0m
+[0;32mI (17247) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=49520[0m
+[0;32mI (17257) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26966[0m
+[0;32mI (17277) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30546[0m
+[0;32mI (17287) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63417[0m
+[0;32mI (17297) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6291[0m
+[0;32mI (17307) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41698[0m
+[0;32mI (17317) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=10110[0m
+[0;32mI (17327) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=10798[0m
+[0;32mI (17337) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30521[0m
+[0;32mI (17347) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44334[0m
+[0;32mI (17367) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5127[0m
+[0;32mI (17377) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=50734[0m
+[0;32mI (17387) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55875[0m
+[0;32mI (17397) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=3527[0m
+[0;32mI (17407) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=14286[0m
+[0;32mI (17417) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62928[0m
+[0;32mI (17427) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60748[0m
+[0;32mI (17437) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=65525[0m
+[0;32mI (17457) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=11925[0m
+[0;32mI (17467) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=42758[0m
+[0;32mI (17477) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=58239[0m
+[0;32mI (17487) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=32892[0m
+[0;32mI (17497) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60710[0m
+[0;32mI (17507) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=38353[0m
+[0;32mI (17517) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47049[0m
+[0;32mI (17527) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=32038[0m
+[0;32mI (17547) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2939[0m
+[0;32mI (17557) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=33862[0m
+[0;32mI (17567) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=59661[0m
+[0;32mI (17577) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=21690[0m
+[0;32mI (17587) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24383[0m
+[0;32mI (17597) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=5242[0m
+[0;32mI (17617) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38105[0m
+[0;32mI (17617) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1162[0m
+[0;32mI (17637) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30911[0m
+[0;32mI (17647) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49901[0m
+[0;32mI (17657) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=58863[0m
+[0;32mI (17667) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=27037[0m
+[0;32mI (17677) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=11618[0m
+[0;32mI (17687) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=8777[0m
+[0;32mI (17707) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6460[0m
+[0;32mI (17707) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39854[0m
+[0;32mI (17727) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60815[0m
+[0;32mI (17737) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=60314[0m
+[0;32mI (17747) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=40080[0m
+[0;32mI (17757) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6858[0m
+[0;32mI (17767) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=11046[0m
+[0;32mI (17777) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=27884[0m
+[0;32mI (17797) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36348[0m
+[0;32mI (17807) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=64296[0m
+[0;32mI (17817) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2876[0m
+[0;32mI (17827) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=32775[0m
+[0;32mI (17837) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1205[0m
+[0;32mI (17847) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54187[0m
+[0;32mI (17857) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36982[0m
+[0;32mI (17867) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59936[0m
+[0;32mI (17887) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=46174[0m
+[0;32mI (17897) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41093[0m
+[0;32mI (17907) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=49716[0m
+[0;32mI (17917) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51918[0m
+[0;32mI (17927) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=57847[0m
+[0;32mI (17937) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24582[0m
+[0;32mI (17947) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=43272[0m
+[0;32mI (17957) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=22047[0m
+[0;32mI (17977) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=35662[0m
+[0;32mI (17987) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=17621[0m
+[0;32mI (17997) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=46467[0m
+[0;32mI (18007) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63501[0m
+[0;32mI (18017) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29568[0m
+[0;32mI (18027) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=8613[0m
+[0;32mI (18047) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28626[0m
+[0;32mI (18047) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=28780[0m
+[0;32mI (18067) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33573[0m
+[0;32mI (18077) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=56512[0m
+[0;32mI (18087) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1102[0m
+[0;32mI (18097) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6767[0m
+[0;32mI (18107) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28466[0m
+[0;32mI (18117) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=13910[0m
+[0;32mI (18137) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=63257[0m
+[0;32mI (18137) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=12538[0m
+[0;32mI (18157) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29372[0m
+[0;32mI (18167) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1422[0m
+[0;32mI (18177) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=52014[0m
+[0;32mI (18187) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=64654[0m
+[0;32mI (18197) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1642[0m
+[0;32mI (18207) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44436[0m
+[0;32mI (18227) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=39711[0m
+[0;32mI (18237) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=53367[0m
+[0;32mI (18247) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47722[0m
+[0;32mI (18257) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31817[0m
+[0;32mI (18267) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24955[0m
+[0;32mI (18277) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=5219[0m
+[0;32mI (18287) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1392[0m
+[0;32mI (18297) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40226[0m
+[0;32mI (18317) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28520[0m
+[0;32mI (18327) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51434[0m
+[0;32mI (18337) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=589[0m
+[0;32mI (18347) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=45100[0m
+[0;32mI (18357) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=7256[0m
+[0;32mI (18367) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=28342[0m
+[0;32mI (18377) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=57277[0m
+[0;32mI (18387) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55751[0m
+[0;32mI (18407) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16605[0m
+[0;32mI (18417) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49775[0m
+[0;32mI (18427) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13416[0m
+[0;32mI (18437) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23757[0m
+[0;32mI (18447) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16990[0m
+[0;32mI (18457) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55862[0m
+[0;32mI (18467) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=57380[0m
+[0;32mI (18477) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=17484[0m
+[0;32mI (18497) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64192[0m
+[0;32mI (18507) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25[0m
+[0;32mI (18517) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=58406[0m
+[0;32mI (18527) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=4213[0m
+[0;32mI (18537) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=35839[0m
+[0;32mI (18547) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=53168[0m
+[0;32mI (18567) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=4916[0m
+[0;32mI (18567) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=64200[0m
+[0;32mI (18587) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24793[0m
+[0;32mI (18597) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=8305[0m
+[0;32mI (18607) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=4440[0m
+[0;32mI (18617) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44839[0m
+[0;32mI (18627) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1937[0m
+[0;32mI (18637) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31581[0m
+[0;32mI (18657) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64192[0m
+[0;32mI (18657) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47705[0m
+[0;32mI (18677) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=59617[0m
+[0;32mI (18687) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49078[0m
+[0;32mI (18697) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=31422[0m
+[0;32mI (18707) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43478[0m
+[0;32mI (18717) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6165[0m
+[0;32mI (18727) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=16306[0m
+[0;32mI (18747) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=7572[0m
+[0;32mI (18757) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54469[0m
+[0;32mI (18767) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30414[0m
+[0;32mI (18777) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47520[0m
+[0;32mI (18787) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=39441[0m
+[0;32mI (18797) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=64958[0m
+[0;32mI (18807) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48213[0m
+[0;32mI (18817) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=32705[0m
+[0;32mI (18837) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=27080[0m
+[0;32mI (18847) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=10643[0m
+[0;32mI (18857) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=40765[0m
+[0;32mI (18867) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23267[0m
+[0;32mI (18877) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=27587[0m
+[0;32mI (18887) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31616[0m
+[0;32mI (18897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36177[0m
+[0;32mI (18907) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59673[0m
+[0;32mI (18927) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=22676[0m
+[0;32mI (18937) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=13213[0m
+[0;32mI (18947) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1904[0m
+[0;32mI (18957) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23798[0m
+[0;32mI (18967) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64676[0m
+[0;32mI (18977) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55839[0m
+[0;32mI (18997) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1113[0m
+[0;32mI (18997) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=5547[0m
+[0;32mI (19017) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=46433[0m
+[0;32mI (19027) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51263[0m
+[0;32mI (19037) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38246[0m
+[0;32mI (19047) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=60622[0m
+[0;32mI (19057) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36547[0m
+[0;32mI (19067) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=45120[0m
+[0;32mI (19087) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20362[0m
+[0;32mI (19087) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44562[0m
+[0;32mI (19107) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56671[0m
+[0;32mI (19117) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=57233[0m
+[0;32mI (19127) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=7484[0m
+[0;32mI (19137) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=9482[0m
+[0;32mI (19147) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=14173[0m
+[0;32mI (19157) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=7512[0m
+[0;32mI (19177) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=59429[0m
+[0;32mI (19187) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=11347[0m
+[0;32mI (19197) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62479[0m
+[0;32mI (19207) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=3438[0m
+[0;32mI (19217) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=11294[0m
+[0;32mI (19227) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61539[0m
+[0;32mI (19237) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=685[0m
+[0;32mI (19247) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39954[0m
+[0;32mI (19267) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=63172[0m
+[0;32mI (19277) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=34444[0m
+[0;32mI (19287) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2670[0m
+[0;32mI (19297) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62257[0m
+[0;32mI (19307) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=19291[0m
+[0;32mI (19317) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47818[0m
+[0;32mI (19327) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=50104[0m
+[0;32mI (19337) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24047[0m
+[0;32mI (19357) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41097[0m
+[0;32mI (19367) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63292[0m
+[0;32mI (19377) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13556[0m
+[0;32mI (19387) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=21030[0m
+[0;32mI (19397) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47551[0m
+[0;32mI (19407) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=53418[0m
+[0;32mI (19417) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=10829[0m
+[0;32mI (19427) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6957[0m
+[0;32mI (19447) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=305[0m
+[0;32mI (19457) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36903[0m
+[0;32mI (19467) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=45071[0m
+[0;32mI (19477) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=58257[0m
+[0;32mI (19487) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6216[0m
+[0;32mI (19497) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49511[0m
+[0;32mI (19517) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47448[0m
+[0;32mI (19517) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=20061[0m
+[0;32mI (19537) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=17001[0m
+[0;32mI (19547) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24788[0m
+[0;32mI (19557) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33797[0m
+[0;32mI (19567) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=17707[0m
+[0;32mI (19577) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=9113[0m
+[0;32mI (19587) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24441[0m
+[0;32mI (19607) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=15104[0m
+[0;32mI (19607) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=13614[0m
+[0;32mI (19627) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24376[0m
+[0;32mI (19637) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=7637[0m
+[0;32mI (19647) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=27099[0m
+[0;32mI (19657) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=60910[0m
+[0;32mI (19667) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30711[0m
+[0;32mI (19677) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63482[0m
+[0;32mI (19697) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54351[0m
+[0;32mI (19707) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43516[0m
+[0;32mI (19717) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21688[0m
+[0;32mI (19727) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40726[0m
+[0;32mI (19737) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54413[0m
+[0;32mI (19747) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51146[0m
+[0;32mI (19757) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=9155[0m
+[0;32mI (19767) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36668[0m
+[0;32mI (19787) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=11625[0m
+[0;32mI (19797) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=52719[0m
+[0;32mI (19807) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=23996[0m
+[0;32mI (19817) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=38202[0m
+[0;32mI (19827) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64686[0m
+[0;32mI (19837) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1452[0m
+[0;32mI (19847) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16948[0m
+[0;32mI (19857) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=27418[0m
+[0;32mI (19877) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=50512[0m
+[0;32mI (19887) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24514[0m
+[0;32mI (19897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=32968[0m
+[0;32mI (19907) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=42498[0m
+[0;32mI (19917) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=65423[0m
+[0;32mI (19927) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=2082[0m
+[0;32mI (19947) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6165[0m
+[0;32mI (19947) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36442[0m
+[0;32mI (19967) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=8621[0m
+[0;32mI (19977) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6105[0m
+[0;32mI (19987) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=43408[0m
+[0;32mI (19997) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51697[0m
+[0;32mI (20007) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=59605[0m
+[0;32mI (20017) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51761[0m
+[0;32mI (20037) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47639[0m
+[0;32mI (20037) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25380[0m
+[0;32mI (20057) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=14891[0m
+[0;32mI (20067) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=45934[0m
+[0;32mI (20077) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24476[0m
+[0;32mI (20087) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54536[0m
+[0;32mI (20097) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=40608[0m
+[0;32mI (20107) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=19749[0m
+[0;32mI (20127) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42717[0m
+[0;32mI (20137) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=12447[0m
+[0;32mI (20147) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=749[0m
+[0;32mI (20157) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=16387[0m
+[0;32mI (20167) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=23919[0m
+[0;32mI (20177) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62353[0m
+[0;32mI (20187) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41654[0m
+[0;32mI (20197) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62225[0m
+[0;32mI (20217) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48822[0m
+[0;32mI (20227) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54359[0m
+[0;32mI (20237) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=9305[0m
+[0;32mI (20247) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63936[0m
+[0;32mI (20257) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=34538[0m
+[0;32mI (20267) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6463[0m
+[0;32mI (20277) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20536[0m
+[0;32mI (20287) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39676[0m
+[0;32mI (20307) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=45937[0m
+[0;32mI (20317) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=53703[0m
+[0;32mI (20327) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24420[0m
+[0;32mI (20337) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=33415[0m
+[0;32mI (20347) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48827[0m
+[0;32mI (20357) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44112[0m
+[0;32mI (20367) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55519[0m
+[0;32mI (20377) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41613[0m
+[0;32mI (20397) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54307[0m
+[0;32mI (20407) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59422[0m
+[0;32mI (20417) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=57889[0m
+[0;32mI (20427) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=48372[0m
+[0;32mI (20437) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20257[0m
+[0;32mI (20447) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=7293[0m
+[0;32mI (20467) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30594[0m
+[0;32mI (20467) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24879[0m
+[0;32mI (20487) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62264[0m
+[0;32mI (20497) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=14398[0m
+[0;32mI (20507) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42526[0m
+[0;32mI (20517) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=52800[0m
+[0;32mI (20527) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=22812[0m
+[0;32mI (20537) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=46353[0m
+[0;32mI (20557) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=26058[0m
+[0;32mI (20567) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=33793[0m
+[0;32mI (20577) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16058[0m
+[0;32mI (20587) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=58398[0m
+[0;32mI (20597) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13426[0m
+[0;32mI (20607) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=42032[0m
+[0;32mI (20617) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60570[0m
+[0;32mI (20627) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25812[0m
+[0;32mI (20647) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=32579[0m
+[0;32mI (20657) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63777[0m
+[0;32mI (20667) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=25577[0m
+[0;32mI (20677) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=19438[0m
+[0;32mI (20687) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=45459[0m
+[0;32mI (20697) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=10239[0m
+[0;32mI (20707) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=22274[0m
+[0;32mI (20717) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=15026[0m
+[0;32mI (20737) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=12863[0m
+[0;32mI (20747) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51866[0m
+[0;32mI (20757) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38339[0m
+[0;32mI (20767) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43118[0m
+[0;32mI (20777) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=31730[0m
+[0;32mI (20787) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1616[0m
+[0;32mI (20807) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30803[0m
+[0;32mI (20807) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=10830[0m
+[0;32mI (20827) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=11100[0m
+[0;32mI (20837) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36624[0m
+[0;32mI (20847) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=25490[0m
+[0;32mI (20857) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=22578[0m
+[0;32mI (20867) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2386[0m
+[0;32mI (20877) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54320[0m
+[0;32mI (20897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=49634[0m
+[0;32mI (20897) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=14659[0m
+[0;32mI (20917) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=31834[0m
+[0;32mI (20927) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=21940[0m
+[0;32mI (20937) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=7269[0m
+[0;32mI (20947) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55418[0m
+[0;32mI (20957) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=39927[0m
+[0;32mI (20967) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49434[0m
+[0;32mI (20987) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21088[0m
+[0;32mI (20997) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=15071[0m
+[0;32mI (21007) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=23251[0m
+[0;32mI (21017) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26916[0m
+[0;32mI (21027) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=50878[0m
+[0;32mI (21037) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=22956[0m
+[0;32mI (21047) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=61905[0m
+[0;32mI (21057) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31451[0m
+[0;32mI (21077) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60923[0m
+[0;32mI (21087) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39111[0m
+[0;32mI (21097) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=26947[0m
+[0;32mI (21107) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=19318[0m
+[0;32mI (21117) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38939[0m
+[0;32mI (21127) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=51073[0m
+[0;32mI (21137) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=53909[0m
+[0;32mI (21147) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=50306[0m
+[0;32mI (21167) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41450[0m
+[0;32mI (21177) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=13364[0m
+[0;32mI (21187) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55340[0m
+[0;32mI (21197) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=50537[0m
+[0;32mI (21207) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54908[0m
+[0;32mI (21217) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=3087[0m
+[0;32mI (21237) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6542[0m
+[0;32mI (21237) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=21143[0m
+[0;32mI (21257) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=39094[0m
+[0;32mI (21267) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39314[0m
+[0;32mI (21277) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=46360[0m
+[0;32mI (21287) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=20477[0m
+[0;32mI (21297) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=27757[0m
+[0;32mI (21307) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=38476[0m
+[0;32mI (21327) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=37383[0m
+[0;32mI (21337) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61049[0m
+[0;32mI (21347) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=3666[0m
+[0;32mI (21357) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=34258[0m
+[0;32mI (21367) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=35048[0m
+[0;32mI (21377) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=3818[0m
+[0;32mI (21387) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=11864[0m
+[0;32mI (21397) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36265[0m
+[0;32mI (21417) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60301[0m
+[0;32mI (21427) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1644[0m
+[0;32mI (21437) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=18515[0m
+[0;32mI (21447) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43615[0m
+[0;32mI (21457) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64259[0m
+[0;32mI (21467) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31758[0m
+[0;32mI (21477) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=8554[0m
+[0;32mI (21487) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=27679[0m
+[0;32mI (21507) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30524[0m
+[0;32mI (21517) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=486[0m
+[0;32mI (21527) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33707[0m
+[0;32mI (21537) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1079[0m
+[0;32mI (21547) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64451[0m
+[0;32mI (21557) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=10824[0m
+[0;32mI (21567) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38174[0m
+[0;32mI (21577) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=50434[0m
+[0;32mI (21597) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42697[0m
+[0;32mI (21607) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1028[0m
+[0;32mI (21617) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54015[0m
+[0;32mI (21627) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=22846[0;31mE (21637) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (21637) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (21637) task_wdt: Tasks currently running:[0m
+[0;31mE (21637) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (21637) task_wdt: CPU 1: mqtt_publish_ta[0m
+[0;31mE (21637) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084EEA:0x3FFB2580 0x40083315:0x3FFB25A0 0x400D5AC1:0x3FFC9C70 0x400D629F:0x3FFC9CA0 0x400D72A1:0x3FFC9CC0 0x4000BD83:0x3FFC9CE0 0x4000182A:0x3FFC9D00 0x400D6BD9:0x3FFC9D20 0x400D72A1:0x3FFC9D40 0x4000BD83:0x3FFC9D60 0x4000117D:0x3FFC9D80 0x400592FE:0x3FFC9DA0 0x4005937A:0x3FFC9DC0 0x4015616D:0x3FFC9DE0 0x40162F67:0x3FFC9E10 0x40162945:0x3FFC9E30 0x401565FD:0x3FFCA150 0x40171481:0x3FFCA180 0x4008FA89:0x3FFCA1B0 0x400D8619:0x3FFCA200 0x40089FD9:0x3FFCA9E0
+
+[0m
+[0;32mI (21717) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33547[0m
+[0;32mI (21727) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=20993[0m
+[0;32mI (21737) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=9749[0m
+[0;32mI (21747) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=33036[0m
+[0;32mI (21757) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56242[0m
+[0;32mI (21767) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62187[0m
+[0;32mI (21787) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38128[0m
+[0;32mI (21787) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=52675[0m
+[0;32mI (21807) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=49909[0m
+[0;32mI (21817) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47717[0m
+[0;32mI (21827) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6335[0m
+[0;32mI (21837) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=12534[0m
+[0;32mI (21847) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30268[0m
+[0;32mI (21857) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54790[0m
+[0;32mI (21877) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=59083[0m
+[0;32mI (21877) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23044[0m
+[0;32mI (21897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5994[0m
+[0;32mI (21907) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63577[0m
+[0;32mI (21917) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2193[0m
+[0;32mI (21927) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=2994[0m
+[0;32mI (21937) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=17241[0m
+[0;32mI (21947) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6784[0m
+[0;32mI (21967) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=52632[0m
+[0;32mI (21977) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=57932[0m
+[0;32mI (21987) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=34771[0m
+[0;32mI (21997) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=4972[0m
+[0;32mI (22007) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62193[0m
+[0;32mI (22017) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=17369[0m
+[0;32mI (22027) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30351[0m
+[0;32mI (22037) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=7659[0m
+[0;32mI (22057) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60857[0m
+[0;32mI (22067) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=16495[0m
+[0;32mI (22077) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48560[0m
+[0;32mI (22087) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55134[0m
+[0;32mI (22097) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16271[0m
+[0;32mI (22107) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=58399[0m
+[0;32mI (22117) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64633[0m
+[0;32mI (22127) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=58535[0m
+[0;32mI (22147) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=57120[0m
+[0;32mI (22157) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24104[0m
+[0;32mI (22167) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55969[0m
+[0;32mI (22177) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=57580[0m
+[0;32mI (22187) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=11649[0m
+[0;32mI (22197) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49942[0m
+[0;32mI (22217) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=15474[0m
+[0;32mI (22217) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31141[0m
+[0;32mI (22237) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=27892[0m
+[0;32mI (22247) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=2538[0m
+[0;32mI (22257) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=52266[0m
+[0;32mI (22267) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=37157[0m
+[0;32mI (22277) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=35920[0m
+[0;32mI (22287) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61317[0m
+[0;32mI (22307) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55411[0m
+[0;32mI (22307) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=52138[0m
+[0;32mI (22327) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47183[0m
+[0;32mI (22337) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=18431[0m
+[0;32mI (22347) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=8193[0m
+[0;32mI (22357) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=52167[0m
+[0;32mI (22367) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=3879[0m
+[0;32mI (22377) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=14232[0m
+[0;32mI (22397) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56137[0m
+[0;32mI (22407) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41602[0m
+[0;32mI (22417) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=37606[0m
+[0;32mI (22427) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=7561[0m
+[0;32mI (22437) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38805[0m
+[0;32mI (22447) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=38472[0m
+[0;32mI (22457) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=65466[0m
+[0;32mI (22467) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35894[0m
+[0;32mI (22487) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56458[0m
+[0;32mI (22497) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1245[0m
+[0;32mI (22507) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20240[0m
+[0;32mI (22517) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47003[0m
+[0;32mI (22527) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=34308[0m
+[0;32mI (22537) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=46652[0m
+[0;32mI (22547) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5181[0m
+[0;32mI (22557) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=10803[0m
+[0;32mI (22577) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16890[0m
+[0;32mI (22587) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=65315[0m
+[0;32mI (22597) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=26092[0m
+[0;32mI (22607) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=9904[0m
+[0;32mI (22617) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=3515[0m
+[0;32mI (22627) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25129[0m
+[0;32mI (22637) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55309[0m
+[0;32mI (22647) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=8446[0m
+[0;32mI (22667) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2048[0m
+[0;32mI (22677) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=20357[0m
+[0;32mI (22687) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13704[0m
+[0;32mI (22697) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=9608[0m
+[0;32mI (22707) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16102[0m
+[0;32mI (22717) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=2797[0m
+[0;32mI (22737) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41349[0m
+[0;32mI (22737) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24275[0m
+[0;32mI (22757) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20990[0m
+[0;32mI (22767) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23648[0m
+[0;32mI (22777) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28608[0m
+[0;32mI (22787) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35058[0m
+[0;32mI (22797) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=8233[0m
+[0;32mI (22807) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47340[0m
+[0;32mI (22827) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=59822[0m
+[0;32mI (22827) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=2561[0m
+[0;32mI (22847) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=8103[0m
+[0;32mI (22857) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26924[0m
+[0;32mI (22867) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1204[0m
+[0;32mI (22877) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=20147[0m
+[0;32mI (22887) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56961[0m
+[0;32mI (22897) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39929[0m
+[0;32mI (22917) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38623[0m
+[0;32mI (22927) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31082[0m
+[0;32mI (22937) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=26748[0m
+[0;32mI (22947) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=27746[0m
+[0;32mI (22957) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=15081[0m
+[0;32mI (22967) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1648[0m
+[0;32mI (22977) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41006[0m
+[0;32mI (22987) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25382[0m
+[0;32mI (23007) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38205[0m
+[0;32mI (23017) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=8804[0m
+[0;32mI (23027) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42693[0m
+[0;32mI (23037) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=2738[0m
+[0;32mI (23047) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=31462[0m
+[0;32mI (23057) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=57406[0m
+[0;32mI (23067) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=46532[0m
+[0;32mI (23077) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61554[0m
+[0;32mI (23097) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=7404[0m
+[0;32mI (23107) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=12457[0m
+[0;32mI (23117) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=35553[0m
+[0;32mI (23127) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=28053[0m
+[0;32mI (23137) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47026[0m
+[0;32mI (23147) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=15460[0m
+[0;32mI (23157) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30523[0m
+[0;32mI (23167) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41706[0m
+[0;32mI (23187) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48013[0m
+[0;32mI (23197) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=48695[0m
+[0;32mI (23207) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1853[0m
+[0;32mI (23217) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43564[0m
+[0;32mI (23227) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=44750[0m
+[0;32mI (23237) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54752[0m
+[0;32mI (23257) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47056[0m
+[0;32mI (23257) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49766[0m
+[0;32mI (23277) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2784[0m
+[0;32mI (23287) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=16383[0m
+[0;32mI (23297) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=3337[0m
+[0;32mI (23307) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=8745[0m
+[0;32mI (23317) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13858[0m
+[0;32mI (23327) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=34779[0m
+[0;32mI (23347) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41107[0m
+[0;32mI (23357) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23668[0m
+[0;32mI (23367) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=49724[0m
+[0;32mI (23377) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=5779[0m
+[0;32mI (23387) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=22399[0m
+[0;32mI (23397) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1815[0m
+[0;32mI (23407) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=49371[0m
+[0;32mI (23417) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47758[0m
+[0;32mI (23437) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=39553[0m
+[0;32mI (23447) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=45787[0m
+[0;32mI (23457) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=26100[0m
+[0;32mI (23467) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62559[0m
+[0;32mI (23477) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56257[0m
+[0;32mI (23487) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=64868[0m
+[0;32mI (23497) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36174[0m
+[0;32mI (23507) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=65486[0m
+[0;32mI (23527) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=35610[0m
+[0;32mI (23537) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39708[0m
+[0;32mI (23547) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48468[0m
+[0;32mI (23557) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=398[0m
+[0;32mI (23567) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=37340[0m
+[0;32mI (23577) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=10100[0m
+[0;32mI (23587) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47811[0m
+[0;32mI (23597) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25973[0m
+[0;32mI (23617) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=65313[0m
+[0;32mI (23627) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=50926[0m
+[0;32mI (23637) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=46522[0m
+[0;32mI (23647) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=21465[0m
+[0;32mI (23657) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42414[0m
+[0;32mI (23667) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=48207[0m
+[0;32mI (23687) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=57147[0m
+[0;32mI (23687) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=11174[0m
+[0;32mI (23707) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29535[0m
+[0;32mI (23717) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35173[0m
+[0;32mI (23727) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54635[0m
+[0;32mI (23737) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49432[0m
+[0;32mI (23747) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=64775[0m
+[0;32mI (23757) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=42568[0m
+[0;32mI (23777) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42750[0m
+[0;32mI (23787) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40283[0m
+[0;32mI (23797) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=46778[0m
+[0;32mI (23807) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=15457[0m
+[0;32mI (23817) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20062[0m
+[0;32mI (23827) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61665[0m
+[0;32mI (23837) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=58885[0m
+[0;32mI (23847) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=9076[0m
+[0;32mI (23867) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24508[0m
+[0;32mI (23877) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=14268[0m
+[0;32mI (23887) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41501[0m
+[0;32mI (23897) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=31023[0m
+[0;32mI (23907) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=47336[0m
+[0;32mI (23917) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=28643[0m
+[0;32mI (23927) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55726[0m
+[0;32mI (23937) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=825[0m
+[0;32mI (23957) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=26628[0m
+[0;32mI (23967) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=34366[0m
+[0;32mI (23977) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6043[0m
+[0;32mI (23987) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=64176[0m
+[0;32mI (23997) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28639[0m
+[0;32mI (24007) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=52444[0m
+[0;32mI (24017) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=32399[0m
+[0;32mI (24027) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=13805[0m
+[0;32mI (24047) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=53522[0m
+[0;32mI (24057) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1989[0m
+[0;32mI (24067) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5236[0m
+[0;32mI (24077) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47964[0m
+[0;32mI (24087) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=58589[0m
+[0;32mI (24097) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55897[0m
+[0;32mI (24117) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=14937[0m
+[0;32mI (24117) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=37293[0m
+[0;32mI (24137) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=3378[0m
+[0;32mI (24147) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=5961[0m
+[0;32mI (24157) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13555[0m
+[0;32mI (24167) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=64882[0m
+[0;32mI (24177) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41005[0m
+[0;32mI (24187) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6687[0m
+[0;32mI (24207) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=10335[0m
+[0;32mI (24207) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=11165[0m
+[0;32mI (24227) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20443[0m
+[0;32mI (24237) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=20868[0m
+[0;32mI (24247) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21415[0m
+[0;32mI (24257) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=42464[0m
+[0;32mI (24267) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6419[0m
+[0;32mI (24277) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=615[0m
+[0;32mI (24297) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56535[0m
+[0;32mI (24307) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23840[0m
+[0;32mI (24317) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24373[0m
+[0;32mI (24327) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1336[0m
+[0;32mI (24337) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33716[0m
+[0;32mI (24347) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=21794[0m
+[0;32mI (24357) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=4802[0m
+[0;32mI (24367) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54595[0m
+[0;32mI (24387) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56470[0m
+[0;32mI (24397) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62769[0m
+[0;32mI (24407) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33278[0m
+[0;32mI (24417) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43519[0m
+[0;32mI (24427) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=3787[0m
+[0;32mI (24437) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=4847[0m
+[0;32mI (24447) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=19078[0m
+[0;32mI (24457) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=37271[0m
+[0;32mI (24477) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56559[0m
+[0;32mI (24487) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=22949[0m
+[0;32mI (24497) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=61953[0m
+[0;32mI (24507) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=7169[0m
+[0;32mI (24517) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=25634[0m
+[0;32mI (24527) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=5336[0m
+[0;32mI (24537) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42059[0m
+[0;32mI (24547) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=29203[0m
+[0;32mI (24567) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=31298[0m
+[0;32mI (24577) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=46807[0m
+[0;32mI (24587) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=61607[0m
+[0;32mI (24597) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=30880[0m
+[0;32mI (24607) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=4840[0m
+[0;32mI (24617) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63641[0m
+[0;32mI (24637) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16670[0m
+[0;32mI (24637) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=38305[0m
+[0;32mI (24657) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1555[0m
+[0;32mI (24667) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=3735[0m
+[0;32mI (24677) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=23433[0m
+[0;32mI (24687) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61626[0m
+[0;32mI (24697) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33130[0m
+[0;32mI (24707) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=28235[0m
+[0;32mI (24727) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60588[0m
+[0;32mI (24727) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47285[0m
+[0;32mI (24747) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=38446[0m
+[0;32mI (24757) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=56702[0m
+[0;32mI (24767) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=44143[0m
+[0;32mI (24777) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=10921[0m
+[0;32mI (24787) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=61749[0m
+[0;32mI (24797) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24444[0m
+[0;32mI (24817) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=57927[0m
+[0;32mI (24827) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1181[0m
+[0;32mI (24837) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=45324[0m
+[0;32mI (24847) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=38079[0m
+[0;32mI (24857) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24408[0m
+[0;32mI (24867) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54104[0m
+[0;32mI (24877) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=35211[0m
+[0;32mI (24887) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55039[0m
+[0;32mI (24907) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2999[0m
+[0;32mI (24917) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6268[0m
+[0;32mI (24927) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33755[0m
+[0;32mI (24937) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=56669[0m
+[0;32mI (24947) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=397[0m
+[0;32mI (24957) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=15390[0m
+[0;32mI (24967) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29234[0m
+[0;32mI (24977) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=62944[0m
+[0;32mI (24997) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5679[0m
+[0;32mI (25007) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43810[0m
+[0;32mI (25017) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56526[0m
+[0;32mI (25027) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=28667[0m
+[0;32mI (25037) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28443[0m
+[0;32mI (25047) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=54966[0m
+[0;32mI (25067) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=40714[0m
+[0;32mI (25067) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36419[0m
+[0;32mI (25087) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13585[0m
+[0;32mI (25097) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=45566[0m
+[0;32mI (25107) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=10881[0m
+[0;32mI (25117) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59461[0m
+[0;32mI (25127) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=22066[0m
+[0;32mI (25137) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55102[0m
+[0;32mI (25157) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=12999[0m
+[0;32mI (25157) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25960[0m
+[0;32mI (25177) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=48561[0m
+[0;32mI (25187) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=42940[0m
+[0;32mI (25197) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=18298[0m
+[0;32mI (25207) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40999[0m
+[0;32mI (25217) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=61471[0m
+[0;32mI (25227) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=12985[0m
+[0;32mI (25247) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56992[0m
+[0;32mI (25257) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=28799[0m
+[0;32mI (25267) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=63954[0m
+[0;32mI (25277) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=17045[0m
+[0;32mI (25287) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21345[0m
+[0;32mI (25297) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=52173[0m
+[0;32mI (25307) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28778[0m
+[0;32mI (25317) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40640[0m
+[0;32mI (25337) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=7151[0m
+[0;32mI (25347) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=5623[0m
+[0;32mI (25357) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=7232[0m
+[0;32mI (25367) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=40653[0m
+[0;32mI (25377) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=28591[0m
+[0;32mI (25387) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=46574[0m
+[0;32mI (25397) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=18098[0m
+[0;32mI (25407) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=56446[0m
+[0;32mI (25427) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20787[0m
+[0;32mI (25437) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43219[0m
+[0;32mI (25447) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=65273[0m
+[0;32mI (25457) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=641[0m
+[0;32mI (25467) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=27970[0m
+[0;32mI (25477) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35714[0m
+[0;32mI (25497) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=37143[0m
+[0;32mI (25497) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=52037[0m
+[0;32mI (25517) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=6512[0m
+[0;32mI (25527) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=60520[0m
+[0;32mI (25537) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=10877[0m
+[0;32mI (25547) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=9924[0m
+[0;32mI (25557) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62124[0m
+[0;32mI (25567) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=6865[0m
+[0;32mI (25587) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=36411[0m
+[0;32mI (25587) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63319[0m
+[0;32mI (25607) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=9308[0m
+[0;32mI (25617) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35975[0m
+[0;32mI (25627) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=32829[0m
+[0;32mI (25637) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=20511[0m
+[0;32mI (25647) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5974[0m
+[0;32mI (25657) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41708[0m
+[0;32mI (25677) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=14710[0m
+[0;32mI (25687) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36033[0m
+[0;32mI (25697) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=37793[0m
+[0;32mI (25707) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55047[0m
+[0;32mI (25717) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=39678[0m
+[0;32mI (25727) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=4816[0m
+[0;32mI (25737) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60462[0m
+[0;32mI (25747) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=28064[0m
+[0;32mI (25767) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=15464[0m
+[0;32mI (25777) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=25325[0m
+[0;32mI (25787) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=16078[0m
+[0;32mI (25797) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=16998[0m
+[0;32mI (25807) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=14932[0m
+[0;32mI (25817) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=58020[0m
+[0;32mI (25827) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=10001[0m
+[0;32mI (25837) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63280[0m
+[0;32mI (25857) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=27786[0m
+[0;32mI (25867) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=21691[0m
+[0;32mI (25877) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2065[0m
+[0;32mI (25887) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=8392[0m
+[0;32mI (25897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=52220[0m
+[0;32mI (25907) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43587[0m
+[0;32mI (25917) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=26342[0m
+[0;32mI (25927) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=30024[0m
+[0;32mI (25947) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54513[0m
+[0;32mI (25957) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61533[0m
+[0;32mI (25967) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42480[0m
+[0;32mI (25977) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26439[0m
+[0;32mI (25987) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41089[0m
+[0;32mI (25997) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=47813[0m
+[0;32mI (26017) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42692[0m
+[0;32mI (26017) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=58366[0m
+[0;32mI (26037) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=26561[0m
+[0;32mI (26047) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=44520[0m
+[0;32mI (26057) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24813[0m
+[0;32mI (26067) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35946[0m
+[0;32mI (26077) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=41079[0m
+[0;32mI (26087) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=2164[0m
+[0;32mI (26107) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=15108[0m
+[0;32mI (26117) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=16754[0m
+[0;32mI (26127) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=33327[0m
+[0;32mI (26137) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=49700[0m
+[0;32mI (26147) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=55436[0m
+[0;32mI (26157) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43256[0m
+[0;32mI (26167) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=21000[0m
+[0;32mI (26177) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=26158[0m
+[0;32mI (26197) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=14334[0m
+[0;32mI (26207) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=3694[0m
+[0;32mI (26217) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=44514[0m
+[0;32mI (26227) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=46173[0m
+[0;32mI (26237) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1552[0m
+[0;32mI (26247) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=7801[0m
+[0;32mI (26257) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=5619[0m
+[0;32mI (26267) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=39496[0m
+[0;32mI (26287) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=60390[0m
+[0;32mI (26297) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=38032[0m
+[0;32mI (26307) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=53279[0m
+[0;32mI (26317) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35720[0m
+[0;32mI (26327) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13836[0m
+[0;32mI (26337) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59176[0m
+[0;32mI (26347) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=24573[0m
+[0;32mI (26357) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=33719[0m
+[0;32mI (26377) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=56057[0m
+[0;32mI (26387) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43939[0m
+[0;32mI (26397) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=19944[0m
+[0;32mI (26407) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43817[0m
+[0;32mI (26417) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=57478[0m
+[0;32mI (26427) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=23276[0m
+[0;32mI (26447) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=29587[0m
+[0;32mI (26447) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=63962[0m
+[0;32mI (26467) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=19764[0m
+[0;32mI (26477) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=29155[0m
+[0;32mI (26487) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=54[0m
+[0;32mI (26497) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=41948[0m
+[0;32mI (26507) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=62554[0m
+[0;32mI (26517) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=19969[0m
+[0;32mI (26537) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=50202[0m
+[0;32mI (26547) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=43340[0m
+[0;32mI (26557) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=17132[0m
+[0;32mI (26567) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=35217[0m
+[0;32mI (26577) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=9101[0m
+[0;32mI (26587) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59921[0m
+[0;32mI (26597) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=51962[0m
+[0;32mI (26607) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=36330[0m
+[0;32mI (26627) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=2085[0m
+[0;32mI (26637) MQTT_CHARGER: Published to topic chargingSession/ with paylo[0;31mE (26637) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (26637) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (26637) task_wdt: Tasks currently running:[0m
+[0;31mE (26637) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (26637) task_wdt: CPU 1: mqtt_publish_ta[0m
+[0;31mE (26637) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40084EEA:0x3FFB2580 0x40083315:0x3FFB25A0 0x400D5AC1:0x3FFC9C70 0x400D629F:0x3FFC9CA0 0x400D72A1:0x3FFC9CC0 0x4000BD83:0x3FFC9CE0 0x4000182A:0x3FFC9D00 0x400D6BD9:0x3FFC9D20 0x400D72A1:0x3FFC9D40 0x4000BD83:0x3FFC9D60 0x4000117D:0x3FFC9D80 0x400592FE:0x3FFC9DA0 0x4005937A:0x3FFC9DC0 0x4015616D:0x3FFC9DE0 0x40162F67:0x3FFC9E10 0x4016290D:0x3FFC9E30 0x401565FD:0x3FFCA150 0x40171481:0x3FFCA180 0x4008FA89:0x3FFCA1B0 0x400D8619:0x3FFCA200 0x40089FD9:0x3FFCA9E0
+
+ad {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=22088[0m
+[0;32mI (26717) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13038[0m
+[0;32mI (26727) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=1092[0m
+[0;32mI (26747) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=13213[0m
+[0;32mI (26757) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=55190[0m
+[0;32mI (26767) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=9684[0m
+[0;32mI (26777) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=12697[0m
+[0;32mI (26787) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=12893[0m
+[0;32mI (26797) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=5543[0m
+[0;32mI (26807) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30718[0m
+[0;32mI (26817) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=24235[0m
+[0;32mI (26837) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=42005[0m
+[0;32mI (26847) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=59762[0m
+[0;32mI (26857) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=34284[0m
+[0;32mI (26867) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=18370[0m
+[0;32mI (26877) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=30705[0m
+[0;32mI (26887) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=56502[0m
+[0;32mI (26897) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=1158[0m
+[0;32mI (26907) MQTT_CHARGER: Published to topic chargingSession/ with payload {
+	"connector":	1,
+	"Event":	1,
+	"finishReason":	10
+}, msg_id=61355[0m
+[0;32mI (26927) MQTT_CHARGER: Published to topic getChargerId/EWE01 with payload {}, msg_id=20861[0m

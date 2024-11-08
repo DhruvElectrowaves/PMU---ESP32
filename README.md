@@ -22,4 +22,14 @@ There are various function created in this which are explained below and are und
 11) esp_mqtt_client_publish - This would publish the Data to MQTT Broker .
 12) wifi_event_handler - This handles the WiFi Events.
 
+The assignment of the chargerSession/chargerId is something that would be triggered whenever there would be a change in the event of the connector as directed by the MCU unit .
+
+
+
+
+
+
+
+
+
 
