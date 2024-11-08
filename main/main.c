@@ -61,7 +61,7 @@ bool mqtt_connect = false;
 
 char charger_Id[20];  // Variable to store the value of charger_iD
 int flag1_Check=0;  // This is the flag when rises when charger iD is received.
-//int flag2_Check=0; //This is the flag which is raised when component_Id is received
+int flag2_Check=0; //This is the flag which is raised when component_Id is received
 char Serial_Number[] = "EWE01" ;  // This variable would hold the value of serial Number received . 
 int component_Id ; // To Store the ID of component whose status CMS wants to know 
 int do_send = 0; // This flag when becomes one , sends the Charging session data 
@@ -339,8 +339,9 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
         		strncpy(charger_Id, original_data, sizeof(charger_Id) - 1);
                 charger_Id[sizeof(charger_Id) - 1] = '\0';  // Null-terminate
                 flag1_Check = 1; // flag is raised when chargerId is received
-				printf("The charger id has been received");
-				
+				do_send = 1;
+				printf("The charger id has been received \n");
+
 		}   else if (strcmp(original_topic, sub_topic2) == 0) {
         		ESP_LOGI(TAG, "Data received for topic getComponentStatus ");
         	    component_Id = atoi(original_data);
@@ -652,17 +653,17 @@ void mqtt_publish_task(void *param) {
     char topic[50];
     char payload[256];
     
-    // char status_topic[50];
-	// char status_payload[256];
+    char status_topic[50];
+	char status_payload[256];
 	
-	// char charging_session_topic[50];
-	// char charging_session_payload[256];
+	char charging_session_topic[50];
+	char charging_session_payload[256];
 	
 	char get_Charger_Id_topic[50];
 	char get_Charger_Id_payload[256];
 
-	// char charger_reply_data_topic[50];
-	// char charger_reply_data_payload[256];
+	char charger_reply_data_topic[50];
+	char charger_reply_data_payload[256];
 
 	while (1) {
 
@@ -672,25 +673,31 @@ void mqtt_publish_task(void *param) {
 		    ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", get_Charger_Id_topic, get_Charger_Id_payload, msg_id0);
 			}
 
-			if(flag1_Check == 1){
+			if(flag1_Check == 1){ // Means Charger_Id has been received
 			prepare_mqtt_data(charger_Id, topic, payload); // Use actual charger ID
 			int msg_id = esp_mqtt_client_publish(mqtt_client, topic, payload, 0, 1, 0);
         	ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", topic, payload, msg_id);
 			}
-			// prepare_mqtt_Status_data(charger_Id, status_topic, status_payload);
-			// int msg_id2 = esp_mqtt_client_publish(mqtt_client, status_topic, status_payload, 0, 1, 0);
-			// ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", status_topic, status_payload, msg_id2);
-			// //flag2_Check=0;
-				
-			// prepare_mqtt_charging_session_data(charger_Id, charging_session_topic , charging_session_payload);
-        	// int msg_id3 = esp_mqtt_client_publish(mqtt_client, charging_session_topic, charging_session_payload, 0, 1, 0);
-			// ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", charging_session_topic, charging_session_payload, msg_id3);
-		
-			// prepare_mqtt_charger_reply_data(charger_Id, charger_reply_data_topic , charger_reply_data_payload);
-            // int msg_id4 = esp_mqtt_client_publish(mqtt_client, charger_reply_data_topic, charger_reply_data_payload, 0, 1, 0);
-			// ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d",  charger_reply_data_topic, charger_reply_data_payload, msg_id4);	
-			
-			vTaskDelay(xDelay); // Delay for periodic publish       
+
+			if(do_send == 1){
+				do_send = 0;
+				prepare_mqtt_Status_data(charger_Id, status_topic, status_payload);
+				int msg_id2 = esp_mqtt_client_publish(mqtt_client, status_topic, status_payload, 0, 1, 0);
+				ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", status_topic, status_payload, msg_id2);
+
+				prepare_mqtt_charging_session_data(charger_Id, charging_session_topic, charging_session_payload);
+				int msg_id3 = esp_mqtt_client_publish(mqtt_client, charging_session_topic, charging_session_payload, 0, 1, 0);
+				ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d", charging_session_topic, charging_session_payload, msg_id3);
+			}
+
+			if(flag2_Check == 1){
+			prepare_mqtt_charger_reply_data(charger_Id, charger_reply_data_topic , charger_reply_data_payload);
+            int msg_id4 = esp_mqtt_client_publish(mqtt_client, charger_reply_data_topic, charger_reply_data_payload, 0, 1, 0);
+			ESP_LOGI(TAG, "Published to topic %s with payload %s, msg_id=%d",  charger_reply_data_topic, charger_reply_data_payload, msg_id4);
+			flag2_Check = 0;
+			}
+			vTaskDelay(xDelay); // Delay for periodic publish     
+
 	}
 }
    
